@@ -28,7 +28,7 @@
   
 
   <p>
-      <div class="fb-comments" data-href="http://tin.vn" data-colorscheme="light" 
+      <div class="fb-comments" data-href="http://project.laravel/blogs/{{$blogs->id}}" data-colorscheme="light" 
        data-numposts="5" data-width="500"></div>
       <div id="fb-root"></div>
     	<script>(function(d, s, id) {
