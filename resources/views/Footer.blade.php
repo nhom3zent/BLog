@@ -1,9 +1,9 @@
 
 <div id='footer'>
 Copyright &#169; <script type='text/javascript'>var creditsyear = new Date();document.write(creditsyear.getFullYear());</script>
-<a href='http://modern-style-theme.blogspot.com/'>Modern Style</a> | Powered by <a href='http://www.blogger.com/'>Blogger</a><br/>
+<a href=''>Modern Style</a> | Powered by <a href=''>Blogger</a><br/>
 <div class='footer-credits'>
-Design by <a href='http://flexithemes.com/' target='_blank'>FlexiThemes</a> | Blogger Template by <a href='http://newbloggerthemes.com/' target='_blank' title='Best Blogger Templates'>NewBloggerThemes.com</a>
+Design by <a href='http://flexithemes.com/' target='_blank'>FlexiThemes</a> | Blogger Template by <a href='' target='_blank' title='Best Blogger Templates'>NewBloggerThemes.com</a>
 </div>
 </div>
 

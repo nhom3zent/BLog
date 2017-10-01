@@ -82,7 +82,7 @@ function createSummaryAndThumb(pID){
       <div id='header-inner'>
         <div class='titlewrapper'>
           <h1 class='title'>
-            <a href='http://modern-style-theme.blogspot.com/'>Modern Style</a>
+            <a href=''>Modern Style</a>
           </h1>
         </div>
         <div class='descriptionwrapper'>
@@ -97,17 +97,17 @@ function createSummaryAndThumb(pID){
     <div class='widget LinkList' data-version='1' id='LinkList1'>
       <div class='widget-content'>
         <ul id='nav'>
-          <li><a href='http://modern-style-theme.blogspot.com/'>Home</a></li>
-          <li><a href='http://modern-style-theme.blogspot.com/p/about.html'>About</a></li>
-          <li><a href='http://modern-style-theme.blogspot.com/p/support.html'>Support</a></li>
-          <li><a href='http://modern-style-theme.blogspot.com/p/contact.html'>Contact</a></li>
-          <li><a href='http://modern-style-theme.blogspot.com/p/advertise.html'>Advertise</a></li>
-          <li><a href='http://newbloggerthemes.com/'>Blogger Templates</a></li>
+          <li><a href=''>Home</a></li>
+          <li><a href=''>About</a></li>
+          <li><a href=''>Support</a></li>
+          <li><a href=''>Contact</a></li>
+          <li><a href=''>Advertise</a></li>
+          <li><a href=''>Blogger Templates</a></li>
         </ul>
       <div class='clear'></div>
       <span class='widget-item-control'>
         <span class='item-control blog-admin'>
-          <a class='quickedit' href='//www.blogger.com/rearrange?blogID=1190943350480663593&widgetType=LinkList&widgetId=LinkList1&action=editWidget&sectionId=nbttopmenu' onclick='return _WidgetManager._PopupConfig(document.getElementById("LinkList1"));' target='configLinkList1' title='Edit'>
+          <a class='quickedit' href='' onclick='return _WidgetManager._PopupConfig(document.getElementById("LinkList1"));' target='configLinkList1' title='Edit'>
           <img alt='' height='18' src='https://resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
           </a>
         </span>
@@ -121,6 +121,6 @@ function createSummaryAndThumb(pID){
 <div class='mainblog section' id='mainblog'>
 <div class='widget Blog' data-version='1' id='Blog1'>
 <div class='blog-posts hfeed'>
-  
+
 <div class='blog-feeds'>
 <div class='feed-links'>

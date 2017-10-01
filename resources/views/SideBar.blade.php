@@ -8,8 +8,8 @@
 </div>
 <div class='span-8 last'>
 <div id='subscriptions'>
-<a href='http://flexithemes.com/demo/ModernStyle/feed/'><img alt='Subscribe to RSS Feed' src='http://3.bp.blogspot.com/-v8BYjJFx1no/UWImevA0erI/AAAAAAAAGlk/QPL7-LMMyY0/s1600/rss.png' title='Subscribe to RSS Feed'/></a>
-<a href='http://twitter.com/FlexiThemes' title='Follow me on Twitter!'><img alt='Follow me on Twitter!' src='http://1.bp.blogspot.com/-nbt_Biub4fw/UWImfjWReuI/AAAAAAAAGmE/GgDhGBQm4GE/s1600/twitter.png' title='Follow me on Twitter!'/></a>
+<a href=''><img alt='Subscribe to RSS Feed' src='http://3.bp.blogspot.com/-v8BYjJFx1no/UWImevA0erI/AAAAAAAAGlk/QPL7-LMMyY0/s1600/rss.png' title='Subscribe to RSS Feed'/></a>
+<a href='' title='Follow me on Twitter!'><img alt='Follow me on Twitter!' src='http://1.bp.blogspot.com/-nbt_Biub4fw/UWImfjWReuI/AAAAAAAAGmE/GgDhGBQm4GE/s1600/twitter.png' title='Follow me on Twitter!'/></a>
 </div>
 <div id='sidebar'>
 <div id='search'>
@@ -43,11 +43,11 @@
 <li>
 <div class='item-content'>
 <div class='item-thumbnail'>
-<a href='http://modern-style-theme.blogspot.com/2010/09/sample-post-with-links-paragraphs-and.html' target='_blank'>
+<a href='' target='_blank'>
 <img alt='' border='0' src='http://3.bp.blogspot.com/-Y_5mvPwNks0/TqoOlVSrzWI/AAAAAAAAAPk/lkdHnJsPWs4/w72-h72-p-k-no-nu/10.jpg'/>
 </a>
 </div>
-<div class='item-title'><a href='http://modern-style-theme.blogspot.com/2010/09/sample-post-with-links-paragraphs-and.html'>Sample post with, links, paragraphs and comments</a></div>
+<div class='item-title'><a href=''>Sample post with, links, paragraphs and comments</a></div>
 <div class='item-snippet'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor  incididunt ut labore et dolore magna aliqua. Ut enim ad min...</div>
 </div>
 <div style='clear: both;'></div>
@@ -55,11 +55,11 @@
 <li>
 <div class='item-content'>
 <div class='item-thumbnail'>
-<a href='http://modern-style-theme.blogspot.com/2010/08/another-one-to-fill-space.html' target='_blank'>
+<a href='' target='_blank'>
 <img alt='' border='0' src='http://1.bp.blogspot.com/-pjRfLSRcrR8/UEse5x73suI/AAAAAAAAIfc/_GI3qJG2CXs/w72-h72-p-k-no-nu/1.jpg'/>
 </a>
 </div>
-<div class='item-title'><a href='http://modern-style-theme.blogspot.com/2010/08/another-one-to-fill-space.html'>Another One to Fill Space</a></div>
+<div class='item-title'><a href=''>Another One to Fill Space</a></div>
 <div class='item-snippet'>  Lorem ipsum eu usu assum liberavisse, ut munere praesent complectitur mea. Sit an option maiorum principes. Ne per probo magna idque, est ...</div>
 </div>
 <div style='clear: both;'></div>
@@ -67,11 +67,11 @@
 <li>
 <div class='item-content'>
 <div class='item-thumbnail'>
-<a href='http://modern-style-theme.blogspot.com/2010/08/this-is-just-going-to-be-another-test.html' target='_blank'>
+<a href='' target='_blank'>
 <img alt='' border='0' src='http://4.bp.blogspot.com/-FFjgl7FlZmM/TqoO2D_kXMI/AAAAAAAAAPs/MsQwv0j-YxE/w72-h72-p-k-no-nu/9.jpg'/>
 </a>
 </div>
-<div class='item-title'><a href='http://modern-style-theme.blogspot.com/2010/08/this-is-just-going-to-be-another-test.html'>This is Just Going To Be Another Test Post</a></div>
+<div class='item-title'><a href=''>This is Just Going To Be Another Test Post</a></div>
 <div class='item-snippet'>Lorem ipsum eu usu assum liberavisse, ut munere praesent complectitur mea. Sit an option maiorum principes. Ne per probo magna idque, est ve...</div>
 </div>
 <div style='clear: both;'></div>
@@ -80,7 +80,7 @@
 <div class='clear'></div>
 <span class='widget-item-control'>
 <span class='item-control blog-admin'>
-<a class='quickedit' href='//www.blogger.com/rearrange?blogID=1190943350480663593&widgetType=PopularPosts&widgetId=PopularPosts1&action=editWidget&sectionId=sidebartop' onclick='return _WidgetManager._PopupConfig(document.getElementById("PopularPosts1"));' target='configPopularPosts1' title='Edit'>
+<a class='quickedit' href='' onclick='return _WidgetManager._PopupConfig(document.getElementById("PopularPosts1"));' target='configPopularPosts1' title='Edit'>
 <img alt='' height='18' src='https://resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
 </a>
 </span>
@@ -97,7 +97,7 @@
 <div class='clear'></div>
 <span class='widget-item-control'>
 <span class='item-control blog-admin'>
-<a class='quickedit' href='//www.blogger.com/rearrange?blogID=1190943350480663593&widgetType=HTML&widgetId=HTML1&action=editWidget&sectionId=sidebartop' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML1"));' target='configHTML1' title='Edit'>
+<a class='quickedit' href='' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML1"));' target='configHTML1' title='Edit'>
 <img alt='' height='18' src='https://resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
 </a>
 </span>
@@ -108,30 +108,30 @@
 <div class='widget-content list-label-widget-content'>
 <ul>
 <li>
-<a dir='ltr' href='http://modern-style-theme.blogspot.com/search/label/Entertainment'>Entertainment</a>
+<a dir='ltr' href=''>Entertainment</a>
 <span dir='ltr'>(1)</span>
 </li>
 <li>
-<a dir='ltr' href='http://modern-style-theme.blogspot.com/search/label/Graphic%20Design'>Graphic Design</a>
+<a dir='ltr' href=''>Graphic Design</a>
 <span dir='ltr'>(3)</span>
 </li>
 <li>
-<a dir='ltr' href='http://modern-style-theme.blogspot.com/search/label/Motion%20Design'>Motion Design</a>
+<a dir='ltr' href=''>Motion Design</a>
 <span dir='ltr'>(3)</span>
 </li>
 <li>
-<a dir='ltr' href='http://modern-style-theme.blogspot.com/search/label/Print%20Design'>Print Design</a>
+<a dir='ltr' href=''>Print Design</a>
 <span dir='ltr'>(1)</span>
 </li>
 <li>
-<a dir='ltr' href='http://modern-style-theme.blogspot.com/search/label/Web%20Design'>Web Design</a>
+<a dir='ltr' href=''>Web Design</a>
 <span dir='ltr'>(4)</span>
 </li>
 </ul>
 <div class='clear'></div>
 <span class='widget-item-control'>
 <span class='item-control blog-admin'>
-<a class='quickedit' href='//www.blogger.com/rearrange?blogID=1190943350480663593&widgetType=Label&widgetId=Label1&action=editWidget&sectionId=sidebartop' onclick='return _WidgetManager._PopupConfig(document.getElementById("Label1"));' target='configLabel1' title='Edit'>
+<a class='quickedit' href='' onclick='return _WidgetManager._PopupConfig(document.getElementById("Label1"));' target='configLabel1' title='Edit'>
 <img alt='' height='18' src='https://resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
 </a>
 </span>
@@ -145,20 +145,20 @@
 <div id='BlogArchive1_ArchiveList'>
 <select id='BlogArchive1_ArchiveMenu'>
 <option value=''>Blog Archive</option>
-<option value='http://modern-style-theme.blogspot.com/2010/09/'>September (1)</option>
-<option value='http://modern-style-theme.blogspot.com/2010/08/'>August (3)</option>
-<option value='http://modern-style-theme.blogspot.com/2010/07/'>July (3)</option>
-<option value='http://modern-style-theme.blogspot.com/2010/06/'>June (2)</option>
-<option value='http://modern-style-theme.blogspot.com/2010/05/'>May (2)</option>
-<option value='http://modern-style-theme.blogspot.com/2010/04/'>April (2)</option>
-<option value='http://modern-style-theme.blogspot.com/2010/03/'>March (1)</option>
+<option value=''>September (1)</option>
+<option value=''>August (3)</option>
+<option value=''>July (3)</option>
+<option value=''>June (2)</option>
+<option value='h'>May (2)</option>
+<option value=''>April (2)</option>
+<option value=''>March (1)</option>
 </select>
 </div>
 </div>
 <div class='clear'></div>
 <span class='widget-item-control'>
 <span class='item-control blog-admin'>
-<a class='quickedit' href='//www.blogger.com/rearrange?blogID=1190943350480663593&widgetType=BlogArchive&widgetId=BlogArchive1&action=editWidget&sectionId=sidebartop' onclick='return _WidgetManager._PopupConfig(document.getElementById("BlogArchive1"));' target='configBlogArchive1' title='Edit'>
+<a class='quickedit' href='' onclick='return _WidgetManager._PopupConfig(document.getElementById("BlogArchive1"));' target='configBlogArchive1' title='Edit'>
 <img alt='' height='18' src='https://resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
 </a>
 </span>
