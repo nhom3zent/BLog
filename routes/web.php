@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/hoadz',function(){
 	
+});
+
+Route::get('abc', function(){
+	return view('Main');
 });
