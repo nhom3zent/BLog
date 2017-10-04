@@ -23,3 +23,7 @@ Route::get('/hoadz',function(){
 Route::get('abc', function(){
 	return view('Main');
 });
+
+Route::get('detail',function(){
+	return view('detail');
+});
