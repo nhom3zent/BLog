@@ -70,7 +70,7 @@ function createSummaryAndThumb(pID){
 
 //]]>
 </script>
-<link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=1190943350480663593&amp;zx=ce68b746-a393-4710-9687-5884cf8b34bd' media='none' onload='if(media!=&#39;all&#39;)media=&#39;all&#39;' rel='stylesheet'/><noscript><link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=1190943350480663593&amp;zx=ce68b746-a393-4710-9687-5884cf8b34bd' rel='stylesheet'/></noscript>
+<link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=1190943350480663593&amp;zx=ce68b746-a393-4710-9687-5884cf8b34bd' media='none' onload='if(media!=&#39;all&#39;)media=&#39;all&#39;' rel='stylesheet'/><noscript><link href='{{ URL::asset('https://www.blogger.com/dyn-css/authorization.css?targetBlogID=1190943350480663593&amp;zx=ce68b746-a393-4710-9687-5884cf8b34bd') }}' rel='stylesheet'/></noscript>
 </head>
 <body>
 <div id='wrapper'>
@@ -97,7 +97,7 @@ function createSummaryAndThumb(pID){
     <div class='widget LinkList' data-version='1' id='LinkList1'>
       <div class='widget-content'>
         <ul id='nav'>
-          <li><a href=''>Home</a></li>
+          <li><a href='{{ URL::asset('') }}'>Home</a></li>
           <li><a href=''>About</a></li>
           <li><a href=''>Support</a></li>
           <li><a href=''>Contact</a></li>
@@ -108,7 +108,7 @@ function createSummaryAndThumb(pID){
       <span class='widget-item-control'>
         <span class='item-control blog-admin'>
           <a class='quickedit' href='' onclick='return _WidgetManager._PopupConfig(document.getElementById("LinkList1"));' target='configLinkList1' title='Edit'>
-          <img alt='' height='18' src='https://resources.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+          <img alt='' height='18' src='{{ URL::asset('https://resources.blogblog.com/img/icon18_wrench_allbkg.png') }}' width='18'/>
           </a>
         </span>
         </span>

@@ -1,4 +1,5 @@
 @include('Header')
-<h1>Demo Blog</h1>
+{{-- @extends('Header') --}}
+
 @include('SideBar')
 @include('Footer')
