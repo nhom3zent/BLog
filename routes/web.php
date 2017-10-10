@@ -14,6 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('aa', function(){
+	echo "string";
+});
+
+Route::get('/hoadz',function(){
+	
+});
+
 Route::get('abc', function(){
 	return view('Main');
+});
+
+Route::get('detail',function(){
+	return view('detail');
 });
