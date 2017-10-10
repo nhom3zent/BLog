@@ -14,7 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('aa', function(){
+	echo "string";
+});
 
 Route::get('/hoadz',function(){
 	

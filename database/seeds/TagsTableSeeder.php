@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class BlogsTableSeeder extends Seeder
+class TagsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,14 +14,8 @@ class BlogsTableSeeder extends Seeder
         $faker = Faker\Factory::create();
 
         for ($i=0; $i < 50; $i++) { 
-        	DB::table('blogs')->insert([
-        	// 'name' => $faker->firstName,
-        	// 'email' => $faker->companyEmail,
-        	// 'mobile' => $faker->phoneNumber,
-        	'title' => $faker->title,
-        	'image' => $faker->imageUrl,
-        	'description' => $faker->text,
-        	'content' => $faker->text,
+        	DB::table('tags')->insert([
+        	'name' => $faker->firstName,
         	'created_at' => $faker->dateTimeThisYear,
         	'updated_at' => $faker->dateTimeThisYear
         	]);
