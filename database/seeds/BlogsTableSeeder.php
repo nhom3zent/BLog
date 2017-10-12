@@ -19,11 +19,16 @@ class BlogsTableSeeder extends Seeder
         	// 'email' => $faker->companyEmail,
         	// 'mobile' => $faker->phoneNumber,
         	'title' => $faker->title,
+            'user_id'=>rand(1,10),
+            'tag_id'=>rand(1,10),
+            'category_id'=>rand(1,10),
+            'status'=>1,
         	'image' => $faker->imageUrl,
         	'description' => $faker->text,
         	'content' => $faker->text,
         	'created_at' => $faker->dateTimeThisYear,
         	'updated_at' => $faker->dateTimeThisYear
+
         	]);
         }
     }

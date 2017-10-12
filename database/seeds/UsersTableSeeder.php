@@ -19,8 +19,9 @@ class UsersTableSeeder extends Seeder
         	'email' => $faker->companyEmail,
         	'password' => $faker->password,
         	'created_at' => $faker->dateTimeThisYear,
-        	'updated_at' => $faker->dateTimeThisYear
-        	]);
+        	'updated_at' => $faker->dateTimeThisYear,
+            'role'  =>rand(1,10)
+        ]);
         }
     }
 }

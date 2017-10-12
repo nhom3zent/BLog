@@ -16,6 +16,10 @@ class CommentsTableSeeder extends Seeder
         for ($i=0; $i < 50; $i++) { 
         	DB::table('comments')->insert([
         	'comment' => $faker->text,
+            'user_id' =>rand(1,10),
+            'blog_id' =>rand(1,10),
+            
+
         	'created_at' => $faker->dateTimeThisYear,
         	'updated_at' => $faker->dateTimeThisYear
         	]);

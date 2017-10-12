@@ -11,56 +11,21 @@
 
 <body>
 
-{{-- <ul>
-	<li>User_Id: <p><select name="user_id" id="">
-				@foreach ($profiles as $profile)
-					<option value="{{$profile->id}}"
-						@if($profile->id == $blog->user_id)
-						selected
-						@endif>{{$profile->name}}</option>
-				@endforeach
-			</select></p></li>
+<ul>
 
-	<li>Title: {{$blogs->title}}</li>
-	<li>Content: {{$blogs->content}}</li>
-	<li>Image: <p><img class="img-responsive" src="{{asset($blogs->image) }} " width="200px" height="100px" alt=""></li>
-	<li>Description: {{$blogs->description}}</li>
+	<div><h4>{{$blogs->title}}</h4></div>
 
-	
-</ul> --}}
+	<p>{{$blogs->description}}</p>
+	<p><img class="img-responsive" src="{{asset($blogs->image) }} " width="200px" height="100px" alt=""></p>
+  <p>{{$blogs->content}}</p>
+
+  <p>{{$blogs->created_at}}</p>
+</ul>
 
 
-  <h1>CHI TIẾT BLOG</h1>
-
-  <h4 align="center">Thông tin người dùng</h4>
-  <ul>
-    <li>ID: 1 </li>
-    <li>User_ID: 1 </li>
-    <li>TITLE: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-    <li>Image: <p><img src="http://media2.thethaovanhoa.vn/2017/02/25/14/58/tu-linh-15.jpg"></p></li>
-    <li>Description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-    <li>Content: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-    <li>Status: 1</li>
-    <li>Created_at:</li>
-    <li>Updated_at:</li>
-    </li>
-
-  </ul>
+ 
+  
+  
 
   <p>
       <div class="fb-comments" data-href="http://tin.vn" data-colorscheme="light" 

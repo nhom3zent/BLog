@@ -26,6 +26,10 @@ Route::get('abc', function(){
 	return view('Main');
 });
 
-Route::get('detail',function(){
-	return view('detail');
-});
+Route::get('blogs','BlogController@index')->name('blogs.index');
+
+Route::get('blogs/{id}','BlogController@detail')->name('blogs.detail');
+
+// Route::get('detail',function(){
+// 	return view('detail');
+// });

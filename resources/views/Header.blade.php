@@ -86,7 +86,7 @@ function createSummaryAndThumb(pID){
           </h1>
         </div>
         <div class='descriptionwrapper'>
-          <h2>Modern Style Blogger Template</h2>
+          {{-- <h2>Modern Style Blogger Template</h2> --}}
         </div>
       </div>
     </div>
