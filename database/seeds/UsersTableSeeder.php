@@ -20,7 +20,7 @@ class UsersTableSeeder extends Seeder
         	'password' => $faker->password,
         	'created_at' => $faker->dateTimeThisYear,
         	'updated_at' => $faker->dateTimeThisYear,
-            'role'  =>rand(1,10)
+            'role'  =>rand(0,1)
         ]);
         }
     }
