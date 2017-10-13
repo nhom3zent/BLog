@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function admin(){
-    	return view('layouts.Dashboard');
+    	return view('admin.Admin');
     }
 }
