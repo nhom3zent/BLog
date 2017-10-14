@@ -16,9 +16,10 @@
 				<a href="{{ route('blogs.detail',$blog->id) }}"><h3 style="color: black">{{$blog->title }}</h3></a>
 				<div class="row">
 					<div class="col-sm-4"><img class="img-responsive" src="{{asset($blog->image) }} " width="200px" height="100px" alt=""></div>
-					<div class="col-sm-8"><a href=""><h4 style="color: black">{{$blog->description }}</h4></a></div>
+					<div class="col-sm-8"><a href="{{ route('blogs.detail',$blog->id) }}"><h4 style="color: black">{{$blog->description }}</h4></a></div>
 				</div>
-
+				
+				<h4>{{$blog->content}}</h4>
 				<hr>
 		@endforeach 
 	@endif 

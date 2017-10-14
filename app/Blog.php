@@ -19,8 +19,26 @@ class Blog extends Model
    		return DB::table('blogs')->where('id',$id)->first();
    }
 
+
    public static function page(){
    		$total = Blog::get()->count();
    		return $total;
+
+    public static function store($data){
+      Blog::create($data);
+      return true;
+   }
+
+   public static function destroy($id){
+   	 DB::table('blogs')->where('id',$id)->delete();
+   		return true;
+   }
+
+   public static function getBlogById($id){
+      return Blog::find($id);
+   }
+
+   public static function UpDateBlogById($id,$data){
+      return Blog::find($id)->update($data);
    }
 }
