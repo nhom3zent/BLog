@@ -8,7 +8,7 @@ use App\User;
 class UserController extends Controller
 {
     public function index(){
-    	$users = User::getAll();
+    	$users = User::paginate(10);
     	// dd($blogs);
     	return view('admin/Admin',['users'=>$users]);
     	dd($users);

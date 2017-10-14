@@ -23,7 +23,7 @@ class Blog extends Model
    public static function page(){
    		$total = Blog::get()->count();
    		return $total;
-
+}
     public static function store($data){
       Blog::create($data);
       return true;
