@@ -10,7 +10,7 @@
 	<title></title>
 </head>
 <body>
-			
+	
 			@if(!empty($blogs))
 		
 		@foreach ($blogs as $blog)
