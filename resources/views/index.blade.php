@@ -9,10 +9,8 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<title></title>
 </head>
-<body>
-			
-			@if(!empty($blogs))
-		
+<body>			
+	@if(!empty($blogs))
 		@foreach ($blogs as $blog)
 
 				<a href="{{ route('blogs.detail',$blog->id) }}"><h3 style="color: black">{{$blog->title }}</h3></a>
@@ -22,8 +20,9 @@
 				</div>
 
 				<hr>
-		@endforeach @endif
-
+		@endforeach 
+	@endif 
+	{{ $blogs->fragment('foo')->render() }}
 </body>
 </html>
 @include('SideBar')
