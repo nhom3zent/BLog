@@ -15,9 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hoadz',function(){
-	
-});
 
 Route::get('abc', function(){
 	return view('Main');
@@ -25,16 +22,11 @@ Route::get('abc', function(){
 
 Route::get('blogs','BlogController@index')->name('blogs.index');
 
-Route::get('blogs/{id}','BlogController@detail')->name('blogs.detail');
 
-// Route::get('detail',function(){
-// 	return view('detail');
-// });
-
-Route::get('detail',function(){
-	return view('detail');
-});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('admin', 'UserController@admin');
+
+Route::get('users', 'UserController@index');
+
+Route::get('blogs/{id}','BlogController@detail')->name('blogs.detail');

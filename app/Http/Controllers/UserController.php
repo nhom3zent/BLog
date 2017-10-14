@@ -3,10 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class UserController extends Controller
 {
-    public function admin(){
-    	return view('admin.Admin');
+    public function index(){
+    	$users = User::getAll();
+    	// dd($blogs);
+    	return view('admin/Admin',['users'=>$users]);
+    	dd($users);
     }
+    public function show($id){
+    	$users = User::show($id);
+    	return view('show_users',['users'=>$users]);
+
+    }
+
 }
