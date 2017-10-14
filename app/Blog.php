@@ -12,7 +12,7 @@ class Blog extends Model
    'title' , 'image' , 'description','content','user_id','created_at','updated_at'   ];
    
 	 public static function getAll(){
-   		return DB::table('blogs')->get();
+   		return DB::table('blogs')->pagiante(5);
    }
 
     public static function detail($id){
