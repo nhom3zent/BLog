@@ -9,7 +9,7 @@ class BlogController extends Controller
 {
 
 	 public function index(){
-    	$blogs = Blog::getAll();
+    	$blogs = Blog::paginate(20);
     	// dd($blogs);
     	return view('index',['blogs'=>$blogs]);
     }

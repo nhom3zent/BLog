@@ -25,6 +25,8 @@
 				<hr>
 		@endforeach @endif
 
+		{{-- {{ $users->links() }}
+ --}}
 </body>
 </html>
 @include('SideBar')
