@@ -27,3 +27,6 @@ Route::get('abc', function(){
 Route::get('detail',function(){
 	return view('detail');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
