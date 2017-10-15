@@ -49,7 +49,7 @@ class UserController extends Controller
         $data = $request->all();
         unset($data['_token']);
         unset($data['method']);
-        $update = User::UpdateBlogById($id,$data);
+        $update = User::UpDateUserById($id,$data);
         return redirect()->route('users.index');
         // return redirect()->back();
 
