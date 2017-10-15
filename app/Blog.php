@@ -12,7 +12,7 @@ class Blog extends Model
    'title' , 'image' , 'description','content','user_id','created_at','updated_at'   ];
    
 	 public static function getAll(){
-   		return DB::table('blogs')->pagiante(10);
+   		return DB::table('blogs')->pagiante(5);
    }
 
     public static function detail($id){
@@ -21,8 +21,8 @@ class Blog extends Model
 
 
    public static function page(){
-   		$total = Blog::get()->count();
-   		return $total;
+      $total = Blog::get()->count();
+      return $total;
 }
     public static function store($data){
       Blog::create($data);
