@@ -1,46 +1,50 @@
 @extends('layouts.Dashboard')
 @section('page_heading')
-<span>Danh sách người dùng</span>
+<span>Danh sách bài đăng</span>
 @stop
 @section('section')
 <div>
-	<a href=""><button type="button" class="btn btn-default btn-info" >Them moi</button></a>
+	<a href=""><button type="button" class="btn btn-default btn-info" >Add</button></a>
 
 	<table class="table table-hover">
 
 		<thead>
 			<tr>
 				<th>#</th>
-				<th>Name</th>
-				<th>Email</th>
+				<th>Title</th>
+				<th>Image</th>
+				<th>Description</th>
+				<th>Content</th>
 				<th>Action</th>
 
 			</tr>
 		</thead>
 		<tbody>
 			
-			@if(!empty($users))
-				@foreach ($users as $user)
+			@if(!empty($blogs))
+				@foreach ($blogs as $blog)
 				<tr>
-					<td>{{$user->id }}</td>
-					<td>{{$user->name }}</td>
-					<td>{{$user->email }}</td>
+					<td>{{$blog->id }}</td>
+					<td>{{$blog->title }}</td>
+					<td>{{ asset($blog->image) }}</td>
+					<td>{{$blog->description }}</td>
+					<td>{{$blog->content }}</td>
 
 					<td><a href=""><button type="button" 
-					class="btn btn-default btn-info">Xem</button></a>
+					class="btn btn-default btn-success">Xem</button></a>
 					<a href=""><button type="button" class="btn btn-default btn-warning">Sửa</button></a>
 					<form method="POST" style="display: inline-block;" action="">
 								{{csrf_field()}}
 
 								<input type="hidden" name="_method" value="DELETE">
-								<button type="submit" >xoa</button>
+								<button type="submit" class="btn btn-default btn-danger" >xoa</button>
 					</form>
 					</td>
 				</tr>
 			@endforeach @endif
 		</tbody>
 	</table>
-	{{$users->links()}}
+	{{$blogs->links()}}
 </html>
 </div>
 @stop

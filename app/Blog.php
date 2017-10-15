@@ -19,6 +19,11 @@ class Blog extends Model
    		return DB::table('blogs')->where('id',$id)->first();
    }
 
+
+   public static function page(){
+      $total = Blog::get()->count();
+      return $total;
+}
     public static function store($data){
       Blog::create($data);
       return true;
