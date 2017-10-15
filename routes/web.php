@@ -27,7 +27,21 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('users', 'UserController@index');
+Route::get('users', 'UserController@index')->name('users.index');
+
+Route::get('users/create','UserController@create')->name('users.create');
+
+Route::post('users/store','UserController@store')->name('users.store');
+
+Route::get('users/{blog_id}/edit','UserController@edit')->name('users.edit');
+
+Route::put('users/{blog_id}','UserController@update')->name('users.update');
+
+Route::get('users/{id}','UserController@show')->name('users.show');
+
+Route::delete('users/{id}','UserController@destroy')->name('users.destroy');
+
+
 
 
 Route::get('blogs/create','BlogController@create')->name('blogs.create');
