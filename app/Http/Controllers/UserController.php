@@ -9,13 +9,11 @@ class UserController extends Controller
 {
     public function index(){
     	$users = User::paginate(10);
-    	// dd($blogs);
-<<<<<<< HEAD
-    	return view('admin/Admin',['users'=>$users]);
-=======
-    	return view('user/index',['users'=>$users]);
->>>>>>> 84fe64ce60134d076cdd3438222e5663783891cf
+        // dd($users);
+        return view('admin/Admin',['users'=>$users]);
+        
     }
+
     public function show($id){
     	$users = User::show($id);
     	return view('user/show',['users'=>$users]);
@@ -53,7 +51,7 @@ class UserController extends Controller
         $data = $request->all();
         unset($data['_token']);
         unset($data['method']);
-        $update = User::UpdateBlogById($id,$data);
+        $update = User::UpDateUserById($id,$data);
         return redirect()->route('users.index');
         // return redirect()->back();
 
