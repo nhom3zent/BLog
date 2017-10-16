@@ -31,9 +31,23 @@ class User extends Authenticatable
     public static function getall(){
         return DB::table('users')->get();
     }
+     public static function show($id){
+        return DB::table('users')->where('id',$id)->first();
+   }
+
     public static function getUserById($id){
     return DB::table('users')->where('id',$id)->first();
  }
-    
+     public static function store($data){
+      User::create($data);
+      return true;
+   }
+   public static function UpDateUserById($id,$data){
+      return User::find($id)->update($data);
+   }
+   public static function destroy($id){
+     DB::table('users')->where('id',$id)->delete();
+        return true;
+   }
 }
 

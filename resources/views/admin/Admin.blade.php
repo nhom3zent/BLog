@@ -1,5 +1,8 @@
-@include('layouts.Plane')
-@include('layouts.Dashboard')
+@extends('layouts.Dashboard')
+@section('page_heading')
+<span>Danh sách người dùng</span>
+@stop
+@section('section')
 <div>
 	<h3>Danh Sách Người Dùng</h3>
 
@@ -44,3 +47,4 @@
 </body>
 </html>
 </div>
+@stop
