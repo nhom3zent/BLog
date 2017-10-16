@@ -8,12 +8,15 @@
                 <div class="panel-heading">Reset Password</div>
 
                 <div class="panel-body">
+<<<<<<< HEAD
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
                         </div>
                     @endif
 
+=======
+>>>>>>> 9bdcf7fc6e0257ee8133446ea88da76d072ac80a
                     <form class="form-horizontal" method="POST" action="{{ route('password.request') }}">
                         {{ csrf_field() }}
 

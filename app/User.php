@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use DB;
 
 class User extends Authenticatable
 {
@@ -26,4 +27,25 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public static function getall(){
+        return DB::table('users')->get();
+    }
+     public static function show($id){
+        return DB::table('users')->where('id',$id)->first();
+   }
+
+    public static function getUserById($id){
+    return DB::table('users')->where('id',$id)->first();
+ }
+     public static function store($data){
+      User::create($data);
+      return true;
+   }
+
+   public static function destroy($id){
+     DB::table('users')->where('id',$id)->delete();
+        return true;
+   }
 }
+
