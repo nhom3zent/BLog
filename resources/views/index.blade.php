@@ -22,16 +22,16 @@
 				</div>
 				<h5>{{$blog->content}}</h5>
 				<hr>
-<<<<<<< HEAD
-		@endforeach @endif
+
+		{{-- @endforeach @endif --}}
 
 		{{-- {{ $users->links() }}
  --}}
-=======
+
 		@endforeach 
 	@endif 
 	{{ $blogs->fragment('foo')->render() }}
->>>>>>> 5cb4db9ea7c6f4b75fea4cbbdc36a0cb0f1acd81
+{{-- >>>>>>> 5cb4db9ea7c6f4b75fea4cbbdc36a0cb0f1acd81 --}}
 </body>
 </html>
 @include('SideBar')

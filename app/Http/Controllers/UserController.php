@@ -9,11 +9,7 @@ class UserController extends Controller
 {
     public function index(){
     	$users = User::paginate(10);
-<<<<<<< HEAD
-    	// dd($users);
-=======
-    	// dd($blogs);
->>>>>>> 5cb4db9ea7c6f4b75fea4cbbdc36a0cb0f1acd81
+        // dd($users);
     	return view('admin/Admin',['users'=>$users]);
     	
     }
