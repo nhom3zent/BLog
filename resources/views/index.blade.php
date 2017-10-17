@@ -22,9 +22,11 @@
 				</div>
 				<h5>{{$blog->content}}</h5>
 				<hr>
+
 		@endforeach 
 	@endif 
 	{{ $blogs->fragment('foo')->render() }}
+
 </body>
 </html>
 @include('SideBar')
