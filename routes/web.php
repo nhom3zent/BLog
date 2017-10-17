@@ -43,6 +43,20 @@ Route::get('users/{id}','UserController@show')->name('users.show');
 Route::delete('users/{id}','UserController@destroy')->name('users.destroy');
 
 
+Route::get('tags', 'TagsController@index')->name('tags.index');
+
+Route::get('tags/create','TagsController@create')->name('tags.create');
+
+Route::post('tags/store','TagsController@store')->name('tags.store');
+
+Route::get('tags/{id}/edit','TagsController@edit')->name('tags.edit');
+
+Route::put('tags/{id}','TagsController@update')->name('tags.update');
+
+Route::get('tags/{id}','TagsController@show')->name('tags.show');
+
+Route::delete('tags/{id}','TagsController@destroy')->name('tags.destroy');
+
 
 
 Route::get('blogs/create','BlogController@create')->name('blogs.create');
@@ -61,3 +75,7 @@ Route::group(['prefix' => 'blog'], function(){
 	Route::get('','Admin\BlogController@index')->name('blog.index');
 	Route::get('create','Admin\BlogController@create')->name('blog.create');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('admin.AdminBlog');

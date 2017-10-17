@@ -6,10 +6,6 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 9bdcf7fc6e0257ee8133446ea88da76d072ac80a
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}

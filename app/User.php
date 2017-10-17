@@ -42,7 +42,9 @@ class User extends Authenticatable
       User::create($data);
       return true;
    }
-
+   public static function UpDateUserById($id,$data){
+      return User::find($id)->update($data);
+   }
    public static function destroy($id){
      DB::table('users')->where('id',$id)->delete();
         return true;
