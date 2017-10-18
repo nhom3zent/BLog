@@ -9,9 +9,10 @@ class UserController extends Controller
 {
     public function index(){
     	$users = User::paginate(10);
-        // dd($users);
-        return view('admin/Admin',['users'=>$users]);
-        
+        // dd($blogs);
+
+        return view('user/index',['users'=>$users]);
+
     }
 
     public function show($id){
