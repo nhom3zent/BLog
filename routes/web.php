@@ -1,15 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 use App\user;
 Route::get('/', function () {
     return view('welcome');
@@ -22,7 +12,6 @@ Route::get('abc', function(){
 
 
 // Route::get('blogs','BlogController@index')->name('blogs.index');
-
 
 Auth::routes();
 
@@ -71,12 +60,20 @@ Route::get('blogs/{id}','BlogController@detail')->name('blogs.detail');
 
 Route::delete('blogs/{id}','BlogController@destroy')->name('blogs.destroy');
 
+
+
+Route::resource('categories','CategoryController');
+
 Route::group(['prefix' => 'blog'], function(){
 	Route::get('','Admin\BlogController@index')->name('blog.index');
 	Route::get('create','Admin\BlogController@create')->name('blog.create');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('admin.AdminBlog');
 	Route::post('store','Admin\BlogController@store')->name('blog.store');
 	Route::get('detail/{id}','Admin\BlogController@show')->name('blog.show');
 	Route::get('edit/{id}','Admin\BlogController@edit')->name('blog.edit');
 	Route::put('update/{id}','Admin\BlogController@update')->name('blog.update');
 	Route::delete('delete/{id}','Admin\BlogController@delete')->name('blog.delete');
-});
