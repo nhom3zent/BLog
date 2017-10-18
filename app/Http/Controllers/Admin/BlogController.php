@@ -40,7 +40,7 @@ class BlogController extends Controller
     }
     public function update(Request $request, $id){
     	$data = $request->all();
-    	dd($data);
+    	// dd($data);
     	if ($request->hasFile('image')) {
     		$path = $request->file('image')->store('image');
     		$data['image'] = $path;

@@ -11,7 +11,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ url ('') }}">Blog Nhóm 3</a>
+                <a class="navbar-brand" href="">Blog Nhóm 3</a>
             </div>
             <!-- /.navbar-header -->
 

@@ -14,7 +14,6 @@
 			<label for="">Image</label>
 			<input type="file" id="image" name="image" class="form-control" id="image" value="asset('path/to/asset')">
 			<img style="width: 200px; height: 200px;" src="/{{ $blog->image }}" alt="">
-
 			<img src="{{ $blog->image }}" style="height: 200px; width: 200px;" alt="">
 		</div>
 		<div class="form-group">
