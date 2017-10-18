@@ -14,7 +14,8 @@ class BlogController extends Controller
     	return view('index',['blogs'=>$blogs]);
     }
 
-     public function detail($id){
+     public function detail($id)
+     {
 
       	$blogs = Blog::detail($id);
     	return view('detail',['blogs'=>$blogs]);
