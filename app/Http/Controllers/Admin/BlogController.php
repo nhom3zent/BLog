@@ -26,6 +26,10 @@ class BlogController extends Controller
     }
     public function store(Request $request){
     	$data = $request->all();
+    	if($request->hasFile('image')){
+            $path = $request->file('image')->store('image');
+            $data['image'] = $path;
+        }
     	Blog::store($data);
     	return redirect()->route('blog.index');
     }
@@ -37,7 +41,12 @@ class BlogController extends Controller
     public function update(Request $request, $id){
     	$data = $request->all();
     	dd($data);
+    	if ($request->hasFile('image')) {
+    		$path = $request->file('image')->store('image');
+    		$data['image'] = $path;
+    	}
     	Blog::find($id)->update($data);
+
     	return redirect()->route('blog.index');    	
     }
     public function delete($id){

@@ -10,6 +10,7 @@ Route::get('abc', function(){
 	return view('Main');
 });
 
+
 // Route::get('blogs','BlogController@index')->name('blogs.index');
 
 Auth::routes();
@@ -66,10 +67,16 @@ Route::resource('categories','CategoryController');
 Route::group(['prefix' => 'blog'], function(){
 	Route::get('','Admin\BlogController@index')->name('blog.index');
 	Route::get('create','Admin\BlogController@create')->name('blog.create');
+
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('admin.AdminBlog');
+
 	Route::post('store','Admin\BlogController@store')->name('blog.store');
 	Route::get('detail/{id}','Admin\BlogController@show')->name('blog.show');
 	Route::get('edit/{id}','Admin\BlogController@edit')->name('blog.edit');
 	Route::put('update/{id}','Admin\BlogController@update')->name('blog.update');
 	Route::delete('delete/{id}','Admin\BlogController@delete')->name('blog.delete');
-});
 
