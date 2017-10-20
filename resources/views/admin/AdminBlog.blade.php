@@ -33,15 +33,6 @@
 					<td>{{$blog->content }}</td>
 
 					<td>
-<<<<<<< HEAD
-						<a href="{{-- {{ route('blog.show', $blog->id) }} --}}">
-							<button type="button" class="btn btn-default btn-success">Xem</button>
-						</a>
-						<a href="{{-- {{ route('blog.edit', $blog->id) }} --}}">
-							<button type="button" class="btn btn-default btn-warning">Sửa</button>
-						</a>
-						<form method="POST" style="display: inline-block;" action="{{-- {{ route('blog.delete', $blog->id) }} --}}">
-=======
 						<a href="{{ route('blog.show', $blog->id) }}">
 							<button type="button" class="btn btn-default btn-success">Xem</button>
 						</a>
@@ -49,7 +40,6 @@
 							<button type="button" class="btn btn-default btn-warning">Sửa</button>
 						</a>
 						<form method="POST" style="display: inline-block;" action="{{ route('blog.delete', $blog->id) }}">
->>>>>>> ed35c1529e8a30a58514b32a5257d6c4b3d3fdf0
 							{{csrf_field()}}
 							<input type="hidden" name="_method" value="DELETE">
 							<button type="submit" class="btn btn-default btn-danger" >xoa</button>
