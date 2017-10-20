@@ -1,9 +1,10 @@
-@include('layouts.Plane')
-@include('layouts.Dashboard')
+@extends('layouts.Dashboard')
+@section('page_heading')
+<span>Danh sách bài đăng</span>
+@stop
+@section('section')
 <div>
-	<h2>DANH SACH av.</h2>
 
-	
 	<a href="{{ route('tags.create') }}"><button type="button" class="btn btn-default btn-info" >Them moi</button></a>
 
 	<table class="table table-hover">
@@ -44,3 +45,4 @@
 	{{$tags->links()}}
 </html>
 </div>
+@stop

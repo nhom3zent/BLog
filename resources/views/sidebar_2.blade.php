@@ -1,3 +1,4 @@
+</div>
 <div class="clearfix sidebar_container floatright">
         
           <div class="clearfix newsletter">

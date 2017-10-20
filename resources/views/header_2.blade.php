@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
 
   <head>
     <title>Welcome to my site</title>
@@ -16,7 +20,7 @@
 
   <body>
 
-<section id="header_area">
+  <section id="header_area">
       <div class="wrapper header">
         <div class="clearfix header_top">
           <div class="clearfix logo floatleft">
@@ -56,10 +60,12 @@
               <li><a href="">Category</a></li>
               <li><a href="">Category</a></li>
               <li><a href="">About us</a></li>
-              <li><a href="">Contact us</a></li>
+              <li><a href="">LOGIN</a></li>
             </ul>
           </nav>
         </div>
       </div>
-    </section>
-   
+  </section>
+  <section id="content_area">
+        <div class="clearfix wrapper main_content_area">
+        <div class="clearfix main_content floatleft">

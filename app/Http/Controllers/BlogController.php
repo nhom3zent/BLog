@@ -9,8 +9,8 @@ class BlogController extends Controller
 {
 
 	 public function index(){
-        $blogs = Blog::paginate(20);
-        dd($blogs);
+        $blogs = Blog::paginate(5);
+        // dd($blogs);
     	return view('test',['blogs'=>$blogs]);
     }
 

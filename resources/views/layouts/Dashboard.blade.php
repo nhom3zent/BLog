@@ -11,7 +11,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ url ('') }}">Blog Nhóm 3</a>
+                <a class="navbar-brand" href="{{ route ('blogs.index') }}">Blog Nhóm 3</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -249,20 +249,20 @@
                             <!-- /input-group -->
                         </li>
                         <li {{ (Request::is('/') ? 'class="active"' : '') }}>
-                            <a href="{{ url ('') }}"><i class="fa fa-dashboard fa-fw"></i> Users</a>
+                            <a href="{{ route('users.index') }}"><i class="fa fa-dashboard fa-fw"></i> Users</a>
                         </li>
                         <li {{ (Request::is('*charts') ? 'class="active"' : '') }}>
-                            <a href="{{ url ('charts') }}"><i class="fa fa-bar-chart-o fa-fw"></i> Blogs</a>
+                            <a href="{{ route('blog.index') }}"><i class="fa fa-bar-chart-o fa-fw"></i> Blogs</a>
                             <!-- /.nav-second-level -->
                         </li>
                         <li {{ (Request::is('*tables') ? 'class="active"' : '') }}>
                             <a href="{{ url ('tables') }}"><i class="fa fa-table fa-fw"></i> Comments</a>
                         </li>
-                        <li {{ (Request::is('*forms') ? 'class="active"' : '') }}>
-                            <a href="{{ url ('forms') }}"><i class="fa fa-edit fa-fw"></i> Tags</a>
+                        <li {{ (Request::is('') ? 'class="active"' : '') }}>
+                            <a href="{{ route('tags.index') }} "><i class="fa fa-edit fa-fw"></i> Tags</a>
                         </li>
                         <li >
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i>Categoryes</a>
+                            <a href="{{ route('users.index') }}"><i class="fa fa-wrench fa-fw"></i>Categoryes</a>
                         </li>
                     </ul>
                 </div>
