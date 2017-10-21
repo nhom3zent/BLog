@@ -1,7 +1,9 @@
-@include('layouts.Plane')
-@include('layouts.Dashboard')
+@extends('layouts.Dashboard')
+@section('page_heading')
+<span>Danh sách bài đăng</span>
+@stop
+@section('section')
 <div>
-	<h2>DANH SACH...............</h2>
 
 	
 	<a href="{{route('categories.create')}}"><button type="button" class="btn btn-default btn-info" >Them moi</button></a>

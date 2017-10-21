@@ -1,10 +1,16 @@
 @extends('layouts.Dashboard')
 @section('page_heading')
 <span>Danh sách bài đăng</span>
+
 @stop
 @section('section')
-<div>
-	
+<div>	
+	@if (session()->has('message.level'))
+		    {!! session('message.level') !!}
+	@endif
+	@if (session()->has('message.level1'))
+		    {!! session('message.level1') !!}
+	@endif
 	<a href="{{ route('blog.create') }}"><button type="button" class="btn btn-default btn-info" >Add</button></a>
 	
 	<table class="table table-hover">
@@ -32,7 +38,6 @@
 					</td>
 					<td>{!! str_limit($blog->description, $words = 55, $end = '...') !!}</td>
 					<td>{!! str_limit($blog->content, $words = 55, $end = '...') !!}</td>
-
 					<td>
 						<a href="{{ route('blog.show', $blog->id) }}">
 							<button type="button" class="btn btn-default btn-success">Xem</button>

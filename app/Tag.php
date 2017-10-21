@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use DB;
 
-class Tags extends Model
+class Tag extends Model
 {
 	protected $fillable = [
         'name', 'blog_id'

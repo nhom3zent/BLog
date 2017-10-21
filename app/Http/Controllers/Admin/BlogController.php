@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Blog;
 use App\User;
+use App\Tag;
 class BlogController extends Controller
 {
     public function index(){
@@ -21,11 +22,13 @@ class BlogController extends Controller
     	]);
     }
     public function create(){
-    	$users = User::get();        
-    	return view('admin.CreateBlogAdmin',[ 'users' => $users]);
+    	$users = User::get();
+        $tags = Tag::get();
+    	return view('admin.CreateBlogAdmin',[ 'users' => $users, 'tags' => $tags]);
     }
     public function store(Request $request){
     	$data = $request->all();
+        // dd($data['tag_id']);
         $rules = [
             'title' => 'required',
             'image' => 'required',
@@ -49,7 +52,12 @@ class BlogController extends Controller
             $path = $request->file('image')->store('image');
             $data['image'] = $path;
         };
-    	Blog::store($data);
+        
+    	Blog::store($data);        
+        if (Blog::store($data)) {
+            $request->session()->flash('message.level','<script>toastr.success("Thêm mới thành công");</script>');
+        }
+
     	return redirect()->route('blog.index');
     }
     public function edit($id){
@@ -63,13 +71,13 @@ class BlogController extends Controller
     	
         $rules = [
             'title' => 'required',
-            'image' => 'required',
+            // 'image' => 'required',
             'description' => 'required',
             'content' => 'required',
         ];
         $messages = [
             'title.required' => 'Không được bỏ trống',
-            'image.required' => 'Không được bỏ trống',
+            // 'image.required' => 'Không được bỏ trống',
             'description.required' => 'Không được bỏ trống',
             'content.required' => 'Không được bỏ trống',
         ];
@@ -84,7 +92,9 @@ class BlogController extends Controller
             $data['image'] = $path;
         }
     	Blog::find($id)->update($data);
-
+        if (Blog::find($id)->update($data)) {
+            $request->session()->flash('message.level1','<script>toastr.success("Sửa thông tin thành công");</script>');
+        }
     	return redirect()->route('blog.index');    	
     }
     public function delete($id){

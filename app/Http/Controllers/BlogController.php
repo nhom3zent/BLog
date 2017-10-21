@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Blog;
 use App\User;
+use App\Tag;
 class BlogController extends Controller
 {
 
 	 public function index(){
-        $blogs = Blog::paginate(8);
-    	// dd($blogs);
-    	return view('index',['blogs'=>$blogs]);
+        $blogs = Blog::paginate(5);
+        // dd($blogs);
+        return view('test',['blogs'=>$blogs]);
     }
 
      public function detail($id)

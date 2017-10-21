@@ -15,7 +15,8 @@ class TagsTableSeeder extends Seeder
 
         for ($i=0; $i < 50; $i++) { 
         	DB::table('tags')->insert([
-        	'name' => $faker->firstName,
+            'name' => $faker->firstName,
+        	'blog_id' => rand(1,10),
         	'created_at' => $faker->dateTimeThisYear,
         	'updated_at' => $faker->dateTimeThisYear
         	]);

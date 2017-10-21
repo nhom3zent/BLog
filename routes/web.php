@@ -1,19 +1,19 @@
 <?php
 
 use App\user;
-Route::get('/', function () {
-    return view('welcome');
-});
-
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('abc', function(){
 	return view('WriteUp');
 });
 
 
+Route::get('blogs','BlogController@index')->name('blogs.index');
+
 // Route::get('blogs','BlogController@index')->name('blogs.index');
 
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 

@@ -9,7 +9,7 @@ class Blog extends Model
     
 
     protected $fillable =[
-   'title' , 'image' , 'description','content','user_id','created_at','updated_at'   ];
+   'title' , 'image' , 'description','content','user_id','blog_tag','created_at','updated_at'   ];
    
 	 public static function getAll(){
    		return DB::table('blogs')->pagiante(5);

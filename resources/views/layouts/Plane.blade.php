@@ -20,6 +20,7 @@
 	
 	<link rel="stylesheet" href="{{ asset('css/sweetalert.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/toastr.css') }}">
 	<link rel="stylesheet" href="{{ asset('../css/select2.min.css') }}">
 	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 	<script src="{{ asset('../js/select2.min.js') }}"></script>
@@ -28,6 +29,7 @@
 	<script src="{{ asset('js/app.js') }}"></script>
 	<script src="{{ asset('js/sweetalert.min.js') }}"></script>
 	<script src="{{ asset('js/toastr.min.js') }}"></script>
+	<script src="{{ asset('js/toastr.js') }}"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 	<script>
 		$.ajaxSetup({
@@ -38,6 +40,9 @@
 	</script>
 </head>
 <body>
+	@php
+		session_start();
+	@endphp
 	@yield('body')
 	<script src="{{ asset("assets/scripts/frontend.js") }}" type="text/javascript"></script>
 </body>
