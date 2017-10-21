@@ -1,5 +1,5 @@
-@include('Header')
+@include('header_2')
 {{-- @extends('Header') --}}
 
-@include('SideBar')
-@include('Footer')
+@include('fideBar_2')
+@include('footer_2')

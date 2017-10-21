@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddRoleToUsersTable extends Migration
+class CreateBlogCategoryesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class AddRoleToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->integer('role')->nullable();
+        Schema::create('blog_categoryes', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('blog_id')->nullable();
+            $table->integer('categoryes_id')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -25,6 +28,6 @@ class AddRoleToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('users');
+        Schema::dropIfExists('blog_categoryes');
     }
 }

@@ -34,8 +34,8 @@ ul,ol{margin:0;padding:0;list-style:none;}
 
 #selectnav1{display:none;}
 /* home page style */
-#header_area{background: url("images/header_bg.png") repeat-x scroll 0 0 #000;}
-#content_area{background: url("images/body_top_bg.png") repeat-x scroll center top #fff;
+#header_area{background: url("images/header_bg.png") repeat-x scroll 0 0 #16bfbf;}
+#content_area{background: url("images/body_top_bg.png") repeat-x scroll center top #d5ddde;
 padding-top: 25px;}
 #footer_top_area{background: none repeat scroll 0 0 #171716;
 margin-top: 25px;
@@ -43,19 +43,20 @@ padding: 20px 0;
 border-top: 5px solid #FFD500;}
 #footer_bottom_area{padding:15px 0px;background:#222;}
 .header{}
-.header_top{padding: 15px 0;}
+.header_top{padding: 35px 0;}
 .logo{}
 .logo a{}
 .logo a h1{color: #fff;
 font-family: oswald;
-font-size: 30px;
+font-size: 40px;
+margin: 15px;
 font-weight: bold;
-line-height: 40px;
+line-height: 17px;
 text-transform: uppercase;}
 .logo a h1 span{color: #ffd500;}
-.search{background: none repeat scroll 0 0 #2c2c2b;
-border: 1px solid #595957;
-padding: 5px;}
+.search{background: none repeat scroll 0 0 #efefe7;
+border: 1px solid #ecece4;
+padding: 0px;}
 .search input[type="text"]{background: none;
 border: none;
 outline: 0;
@@ -65,6 +66,7 @@ width: 200px;}
 -moz-border-left-colors: none;
 -moz-border-right-colors: none;
 -moz-border-top-colors: none;
+/*-moz-border-radius:17px;*/
 background: url("images/search.png") no-repeat scroll 5px 0px rgba(0, 0, 0, 0);
 border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #595957;
 border-image: none;
@@ -76,9 +78,12 @@ padding-left: 5px;
 text-indent: -99999px;
 width: 33px;}
 .header_bottom{background: none repeat scroll 0 0 #ffd500;
-min-height: 30px;
+min-height: 50px;
 padding: 10px;}
 /* dropdown menu*/
+.row{
+	margin: 15px;
+}
 .header_bottom ul{list-style: none outside none;
 margin: 0;
 padding: 0;}
@@ -208,7 +213,9 @@ font-size: 14px;
 padding: 8px;
 text-transform: uppercase;
 width: 120px;cursor:pointer;}
-.sidebar{}
+.sidebar{
+	background: #16bfbf;
+}
 .single_sidebar > h2{}
 .single_sidebar{background: url("images/slider_bg.png") repeat scroll 0 0 rgba(0, 0, 0, 0);padding: 10px;margin-bottom:25px;}
 .sidebar_title{background: url("images/title_down.png") no-repeat scroll 12px 45px rgba(0, 0, 0, 0);
@@ -243,13 +250,13 @@ box-shadow: 1px 4px 3px -2px #DDDDDD;
 transition: background 300ms ease-in;}
 
 /*Category*/
-.single_sidebar .cat-item {background: none repeat scroll 0 0 #454545;
-color: #ffd500;
+.single_sidebar .cat-item {background: none repeat scroll 0 0 #ffffff;
+color: #060500;
 font-weight: bold;
 margin-bottom: 5px;
 padding: 5px;
 text-align: right;}
-.single_sidebar .cat-item a{color: #ddd;
+.single_sidebar .cat-item a{color: #060500;
 display: inline-block;
 font-weight: normal;
 width: 80%;
