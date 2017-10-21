@@ -21,15 +21,34 @@ class BlogController extends Controller
     	]);
     }
     public function create(){
-    	$users = User::get();
+    	$users = User::get();        
     	return view('admin.CreateBlogAdmin',[ 'users' => $users]);
     }
     public function store(Request $request){
     	$data = $request->all();
+        $rules = [
+            'title' => 'required',
+            'image' => 'required',
+            'description' => 'required',
+            'content' => 'required|min:200',
+        ];
+        $messages = [
+            'title.required' => 'Không được bỏ trống!',
+            'image.required' => 'Không được bỏ trống!',
+            'description.required' => 'Không được bỏ trống!',
+            'content.required' => 'Không được bỏ trống!',
+            'content.min' => 'Cần điền ít nhất 200 ký tự!',
+        ];
+        $validator = \Validator::make($request->all(), $rules, $messages);
+        if ($validator->fails()) {
+            return redirect()->back()
+                            ->withErrors($validator->errors())
+                            ->withInput();
+        }
     	if($request->hasFile('image')){
             $path = $request->file('image')->store('image');
             $data['image'] = $path;
-        }
+        };
     	Blog::store($data);
     	return redirect()->route('blog.index');
     }
@@ -41,16 +60,38 @@ class BlogController extends Controller
     public function update(Request $request, $id){
     	$data = $request->all();
     	// dd($data);
-    	if ($request->hasFile('image')) {
-    		$path = $request->file('image')->store('image');
-    		$data['image'] = $path;
-    	}
+    	
+        $rules = [
+            'title' => 'required',
+            'image' => 'required',
+            'description' => 'required',
+            'content' => 'required',
+        ];
+        $messages = [
+            'title.required' => 'Không được bỏ trống',
+            'image.required' => 'Không được bỏ trống',
+            'description.required' => 'Không được bỏ trống',
+            'content.required' => 'Không được bỏ trống',
+        ];
+        $validator = \Validator::make($request->all(), $rules, $messages);
+        if ($validator->fails()) {
+            return redirect()->back()
+                            ->withErrors($validator->errors())
+                            ->withInput();
+        }
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('image');
+            $data['image'] = $path;
+        }
     	Blog::find($id)->update($data);
 
     	return redirect()->route('blog.index');    	
     }
     public function delete($id){
     	Blog::find($id)->delete();
-    	return redirect()->route('blog.index');
+    	return response()->json([
+            'error' => false,
+            'message' => 'Xóa thành công',
+        ]);
     }
 }

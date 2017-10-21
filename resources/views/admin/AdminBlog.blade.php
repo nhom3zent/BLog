@@ -4,8 +4,9 @@
 @stop
 @section('section')
 <div>
+	
 	<a href="{{ route('blog.create') }}"><button type="button" class="btn btn-default btn-info" >Add</button></a>
-
+	
 	<table class="table table-hover">
 
 		<thead>
@@ -23,14 +24,14 @@
 			
 			@if(!empty($blogs))
 				@foreach ($blogs as $blog)
-				<tr>
+				<tr id = "tr-{{ $blog->id }}">
 					<td>{{$blog->id }}</td>
 					<td>{{$blog->title }}</td>
 					<td>
-						<img style="width: 200px; height: 200px;" src="{{ $blog->image }}" alt="">
+						<img style="width: 150px; height: 150px;" src="{{ $blog->image }}" alt="">
 					</td>
-					<td>{{$blog->description }}</td>
-					<td>{{$blog->content }}</td>
+					<td>{!! str_limit($blog->description, $words = 55, $end = '...') !!}</td>
+					<td>{!! str_limit($blog->content, $words = 55, $end = '...') !!}</td>
 
 					<td>
 						<a href="{{ route('blog.show', $blog->id) }}">
@@ -39,11 +40,11 @@
 						<a href="{{ route('blog.edit', $blog->id) }}">
 							<button type="button" class="btn btn-default btn-warning">Sửa</button>
 						</a>
-						<form method="POST" style="display: inline-block;" action="{{ route('blog.delete', $blog->id) }}">
+						{{-- <form method="POST" style="display: inline-block;" action="{{ route('blog.delete', $blog->id) }}">
 							{{csrf_field()}}
 							<input type="hidden" name="_method" value="DELETE">
-							<button type="submit" class="btn btn-default btn-danger" >xoa</button>
-						</form>
+						</form> --}}
+						<button data-id = "{{ $blog->id }}" type="submit" class="btn btn-default btn-danger" >Xóa</button>
 					</td>
 				</tr>
 			@endforeach @endif
@@ -52,4 +53,37 @@
 	{{$blogs->links()}}
 </html>
 </div>
+<script>
+	$(function(){
+		$('.btn-danger').click(function(){
+			// alert('aaa');
+			var id = $(this).data('id');
+			swal({
+				title: "Bạn có muốn xóa không?",
+					type: "warning",
+					showCancelButton: true,
+					confirmButtonColor: "#DD6B55",
+					confirmButtonText: "Có",
+					cancelButtonText: "Không",
+					// closeOnConfirm: false
+			},
+			function(){
+					$.ajax({
+						// alert('a');
+						type:'delete',
+						url: 'blog/' +id,
+						success: function(data){
+							// swal("Delete!", "Bạn đã xóa thành công");
+
+							toastr.success('Bạn đã xóa thành công.');
+							$('#tr-'+id).remove();
+							// setTimeout(function(){
+							// 	window.location.reload();
+							// },1000);
+						}
+					});
+				});
+		});
+	})
+</script>
 @stop
