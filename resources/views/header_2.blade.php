@@ -53,7 +53,7 @@
                   <li><a href="">Contact us</a></li>
                 </ul>
               </li>
-              {{-- <li><a href="">Category</a></li>
+             {{--  <li><a href="">Category</a></li>
               <li><a href="">Category</a></li>
               <li><a href="">Category</a></li>
               <li><a href="">Category</a></li>
@@ -61,8 +61,8 @@
               <li><a href="">Category</a></li>
               <li><a href="">Category</a></li>
               <li><a href="">Category</a></li>
-              <li><a href="">About us</a></li>
-              <li><a href="">LOGIN</a></li> --}}
+              <li><a href="">About us</a></li> --}}
+              <li><a href="http://project.laravel/login">LOGIN</a></li>
             </ul>
           </nav>
         </div>
