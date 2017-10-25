@@ -9,7 +9,6 @@
 
       <br><p>{{$blogs->created_at}}</p>
     </ul>
-
     <p>
         <div class="fb-comments" data-href="http://project.laravel/blogs/{{$blogs->id}}" data-colorscheme="light" 
          data-numposts="5" data-width="500"></div>
