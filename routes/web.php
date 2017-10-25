@@ -11,8 +11,9 @@ Route::get('abc', function(){
 
 
 Route::get('blogs','BlogController@index')->name('blogs.index');
+Route::get('blogs/{id}','BlogController@detail')->name('blogs.detail');
 
-// Route::get('blogs','BlogController@index')->name('blogs.index');
+
 
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -48,17 +49,16 @@ Route::delete('tags/{id}','TagsController@destroy')->name('tags.destroy');
 
 
 
-Route::get('blogs/create','BlogController@create')->name('blogs.create');
+// Route::get('blogs/create','BlogController@create')->name('blogs.create');
 
-Route::post('blogs/store','BlogController@store')->name('blogs.store');
+// Route::post('blogs/store','BlogController@store')->name('blogs.store');
 
-Route::get('blog/{blog_id}/edit','BlogController@edit')->name('blogs.edit');
+// Route::get('blog/{blog_id}/edit','BlogController@edit')->name('blogs.edit');
 
-Route::put('blog/{blog_id}','BlogController@update')->name('blogs.update');
+// Route::put('blog/{blog_id}','BlogController@update')->name('blogs.update');
 
-Route::get('blogs/{id}','BlogController@detail')->name('blogs.detail');
 
-Route::delete('blogs/{id}','BlogController@destroy')->name('blogs.destroy');
+// Route::delete('blogs/{id}','BlogController@destroy')->name('blogs.destroy');
 
 
 
@@ -77,6 +77,6 @@ Route::group(['prefix' => 'blog'], function(){
 // 	return 'XXX';
 // });
 
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('admin.AdminBlog');
