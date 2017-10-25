@@ -24,7 +24,7 @@
       <div class="wrapper header">
         <div class="clearfix header_top row">
           <div class="clearfix logo floatleft">
-            <a href=""><h1><span>ZENT</span>  GROUP</h1></a>
+            
           </div>
           <div class="clearfix search floatright">
             <form>

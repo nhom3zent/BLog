@@ -1,6 +1,6 @@
-@include('header_2')
+@include('header')
 		
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -10,33 +10,29 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
-<body>
+<body> --}}
+
 
 	@if(!empty($blogs))
 
 		@foreach ($blogs as $blog)
 
-				<a href="{{ route('blogs.detail',$blog->id) }}"><h3 style="color: black">{{$blog->title }}</h3></a>
+				<a href="{{ route('blogs.detail',$blog->id) }}"><h4 style="color: black">{{$blog->title }}</h4></a>
 				<div class="row">
-					<div class="col-sm-4"><img class="img-responsive" src="{{asset($blog->image) }} " width="200px" height="100px" alt=""></div>
+					<div class="col-sm-4"><img class="img-responsive" src="{{asset($blog->image) }} " width="200px" height="100px" alt="">
+					</div>
 					<div class="col-sm-8">
 						<a href="{{ route('blogs.detail',$blog->id) }}"><h4 style="color: black">{{$blog->description }}</h4></a>
-						<h5>{{ str_limit($blog->content, $limit = 600, $end = '...')}}</h5>
+						<h5>{{ str_limit($blog->content, $limit = 200, $end = '...')}}</h5>
 						<h5>{{$blog->created_at}}</h5>
-
-
 					</div>
-
 				</div>
 				<hr>
-
 		@endforeach 
 	@endif
 	{{ $blogs->links() }}
-
-
-	@include('sidebar_2')
-	@include('footer_2')
-
+	@include('sidebar')
+	@include('footer')
+	
 	</body>
 </html>

@@ -1,4 +1,4 @@
-  @include('header_2')
+  @include('header')
     
     <ul>
       <div><h4>{{$blogs->title}}</h4></div>
@@ -14,10 +14,6 @@
         <div class="fb-comments" data-href="http://project.laravel/blogs/{{$blogs->id}}" data-colorscheme="light" 
          data-numposts="5" data-width="500"></div>
         <div id="fb-root"></div>
-
-
-    
-
         <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) return;
@@ -31,9 +27,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TssHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     </p>
-</body>
-</html>
-    @include('sidebar_2')
+      @include('sidebar')
+       @include('footer')
 
-    @include('footer_2')
+  
+
+   
 
