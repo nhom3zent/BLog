@@ -7,9 +7,13 @@ use DB;
 
 class Tag extends Model
 {
+  protected $table = 'tags';
 	protected $fillable = [
         'name', 'blog_id'
     ];
+
+      
+    
     public static function getall(){
         return DB::table('tags')->get();
     }
@@ -32,4 +36,6 @@ class Tag extends Model
      DB::table('tags')->where('id',$id)->delete();
         return true;
    }
+
+  
 }

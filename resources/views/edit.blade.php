@@ -44,8 +44,8 @@
 			{{-- <textarea name="description" value="{{$blog->description}}"></textarea> --}}
 			<input type="text" class="form-control" id="" placeholder="Input field" name="description" value="{{$blog->description}}">
 		</div>
-{{-- 
-		<div class="form-group">
+
+		{{-- <div class="form-group">
 			<label for="">Created_at</label>
 			<input type="date" class="form-control" id="" placeholder="Input field" name="created_at" value="{{$blog->created_at}}">
 		</div>

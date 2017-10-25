@@ -37,17 +37,20 @@
 		@if ($errors->has('content'))
 			<p style="color: blue;">{{ $errors->first('content') }}</p>
 		@endif
-		<div>			
+		<div>	
+			<label for="">Tag</label>		
 			<select style="width: 100%;" class="select2" multiple name="tag_id[]">
 				@foreach ($tags as $tag)
 			  		<option value="{{ $tag->id }}">{{ $tag->name }}</option>
 				@endforeach
 		  	</select>		
 		</div>
-		<div class="form-group">
+		<input type="hidden" class="form-control" name="user_id" id="user_id" placeholder="Title" value="{{ Auth::user()->id }}">
+		{{-- <div class="form-group">
 			<label for="">User Name</label>
-			<input type="text" class="form-control" disabled name="user_id" id="user_id" placeholder="Title" value="{{ Auth::user()->name }}">
-		</div>
+			<input type="text" class="form-control" disabled placeholder="Title" value="{{ Auth::user()->name }}">
+			
+		</div> --}}
 		
 		<button type="submit" class="btn btn-primary">Submit</button>
 	</form>

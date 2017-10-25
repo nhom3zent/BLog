@@ -1,18 +1,18 @@
 </div>
 <div class="clearfix sidebar_container floatright">
         
-          <div class="clearfix newsletter">
+          {{-- <div class="clearfix newsletter">
             <form>
               <h2>Signup for newsletter</h2>
               <input type="text" placeholder="Name" id="mce-TEXT"/>
               <input type="email" placeholder="Name" id="mce-EMAIL"/>
               <input type="submit" value="Submit" id="mc-embedded-subscribe"/>
             </form>
-          </div>
+          </div> --}}
           <div class="clearfix sidebar">
             <div class="clearfix single_sidebar">
               <div class="popular_post">
-                <div class="sidebar_title"><h2>Most Popular</h2></div>
+                <div class="{{-- sidebar_title --}}"><h2>Most Popular</h2></div>
                 <ul>
                   <li><a href="">Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. </a></li>
                   <li><a href="">Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. </a></li>

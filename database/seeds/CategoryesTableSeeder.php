@@ -13,8 +13,8 @@ class CategoryesTableSeeder extends Seeder
     {
         $faker = Faker\Factory::create();
 
-        for ($i=0; $i < 50; $i++) { 
-        	DB::table('categories')->insert([
+        for ($i=0; $i < 30; $i++) { 
+        	DB::table('categoryes')->insert([
         	'name' => $faker->firstName,
         	'description' => $faker->text,
         	'created_at' => $faker->dateTimeThisYear,

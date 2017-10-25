@@ -13,7 +13,7 @@ class TagsTableSeeder extends Seeder
     {
         $faker = Faker\Factory::create();
 
-        for ($i=0; $i < 50; $i++) { 
+        for ($i=0; $i < 30; $i++) { 
         	DB::table('tags')->insert([
             'name' => $faker->firstName,
         	'blog_id' => rand(1,10),

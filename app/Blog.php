@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use DB;
+
 class Blog extends Model
 {
     
@@ -11,6 +12,10 @@ class Blog extends Model
     protected $fillable =[
    'title' , 'image' , 'description','content','user_id','blog_tag','created_at','updated_at'   ];
    
+   public function blog_tag(){
+        return $this->belongsToMany('App\Tag', 'blog_tags', 'blog_id', 'tag_id')->withTimestamps();
+    }
+
 	 public static function getAll(){
    		return DB::table('blogs')->pagiante(5);
    }
@@ -25,8 +30,8 @@ class Blog extends Model
       return $total;
 }
     public static function store($data){
-      Blog::create($data);
-      return true;
+      $blog = Blog::create($data);
+      return $blog;
    }
 
    public static function destroy($id){

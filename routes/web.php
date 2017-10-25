@@ -73,6 +73,9 @@ Route::group(['prefix' => 'blog'], function(){
 	Route::put('update/{id}','Admin\BlogController@update')->name('blog.update');
 	Route::delete('/{id}','Admin\BlogController@delete')->name('blog.delete');
 });
+// Route::get('xxxs', function(Request $request){
+// 	return 'XXX';
+// });
 
 Auth::routes();
 

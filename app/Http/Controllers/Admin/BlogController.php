@@ -9,6 +9,10 @@ use App\User;
 use App\Tag;
 class BlogController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index(){
     	$blogs = Blog::paginate(5);
     	return view('admin.AdminBlog',['blogs' => $blogs]);
@@ -28,12 +32,15 @@ class BlogController extends Controller
     }
     public function store(Request $request){
     	$data = $request->all();
+// $blog = Blog::find(1);
+// dd($blog);
+        // dd($blog);
         // dd($data['tag_id']);
         $rules = [
             'title' => 'required',
             'image' => 'required',
             'description' => 'required',
-            'content' => 'required|min:200',
+            'content' => 'required|min:2',
         ];
         $messages = [
             'title.required' => 'Không được bỏ trống!',
@@ -53,11 +60,11 @@ class BlogController extends Controller
             $data['image'] = $path;
         };
         
-    	Blog::store($data);        
-        if (Blog::store($data)) {
+    	$blog = Blog::create($data);        
+        if ($blog) {
             $request->session()->flash('message.level','<script>toastr.success("Thêm mới thành công");</script>');
         }
-
+        $blog->blog_tag()->attach($data['tag_id']);
     	return redirect()->route('blog.index');
     }
     public function edit($id){
@@ -68,7 +75,7 @@ class BlogController extends Controller
     public function update(Request $request, $id){
     	$data = $request->all();
     	// dd($data);
-    	
+        
         $rules = [
             'title' => 'required',
             // 'image' => 'required',
@@ -104,4 +111,5 @@ class BlogController extends Controller
             'message' => 'Xóa thành công',
         ]);
     }
+
 }
