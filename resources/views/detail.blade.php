@@ -3,9 +3,9 @@
     <ul>
       <div><h4>{{$blogs->title}}</h4></div>
 
-      <p>{{$blogs->description}}</p>
+      <p>{!! $blogs->description!!}</p>
       <p><img class="img-responsive" src="{{asset($blogs->image) }} " width="500px" height="150px" alt="" style="text-align: center;"></p>
-      <p>{{$blogs->content}}</p>
+      <p>{!!$blogs->content!!}</p>
 
       <br><p>{{$blogs->created_at}}</p>
     </ul>

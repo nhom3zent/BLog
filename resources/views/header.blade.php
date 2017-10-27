@@ -22,7 +22,7 @@
           <li><a href="#">About</a></li>
           <li><a href="#">Contact us</a></li>
           <li><a href="#">Subscribe</a></li>
-          <li><a href="http://project.laravel/login">Login</a></li>
+          <li><a href="login">Login</a></li>
         </ul>
       </div>
       <div class="social_plus_search floatright">

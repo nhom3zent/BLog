@@ -1,10 +1,9 @@
 @extends('layouts.Dashboard')
 @section('section')
-	<head>
+
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 
-</head>
 	
 	<form action="{{ route('blog.store') }}" method="POST" role="form" enctype="multipart/form-data" id="form">
 		<legend>Form title</legend>

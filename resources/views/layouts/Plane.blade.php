@@ -21,9 +21,9 @@
 	<link rel="stylesheet" href="{{ asset('css/sweetalert.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/toastr.css') }}">
-	<link rel="stylesheet" href="{{ asset('../css/select2.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/select2.min.css') }}">
 	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
-	<script src="{{ asset('../js/select2.min.js') }}"></script>
+	<script src="{{ asset('js/select2.min.js') }}"></script>
 	<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
 	
 	<script src="{{ asset('js/app.js') }}"></script>

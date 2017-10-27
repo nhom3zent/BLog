@@ -22,8 +22,8 @@
 					<div class="col-sm-4"><img class="img-responsive" src="{{asset($blog->image) }} " width="200px" height="100px" alt="">
 					</div>
 					<div class="col-sm-8">
-						<a href="{{ route('blogs.detail',$blog->id) }}"><h4 style="color: black">{{$blog->description }}</h4></a>
-						<h5>{{ str_limit($blog->content, $limit = 200, $end = '...')}}</h5>
+						<a href="{{ route('blogs.detail',$blog->id) }}"><h5 style="color: black">{!!$blog->description !!}</h5></a>
+						<h5>{!! str_limit($blog->content, $limit = 200, $end = '...')!!}</h5>
 						<h5>{{$blog->created_at}}</h5>
 					</div>
 				</div>

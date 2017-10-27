@@ -10,7 +10,8 @@ Route::get('abc', function(){
 });
 
 
-Route::get('blogs','BlogController@index')->name('blogs.index');
+Route::get('blogs','BlogController@indexRight')->name('blogs.indexRight');
+Route::get('blogs','BlogController@indexLeft')->name('blogs.indexLeft');
 Route::get('blogs/{id}','BlogController@detail')->name('blogs.detail');
 
 
@@ -73,10 +74,9 @@ Route::group(['prefix' => 'blog'], function(){
 	Route::put('update/{id}','Admin\BlogController@update')->name('blog.update');
 	Route::delete('/{id}','Admin\BlogController@delete')->name('blog.delete');
 });
-// Route::get('xxxs', function(Request $request){
-// 	return 'XXX';
-// });
+Route::get('xxxs', function(){
+	return view('blog.BlogSideBarLeft');
+});
 
-
-
+Auth::routes();
 Route::get('/home', 'HomeController@index')->name('admin.AdminBlog');

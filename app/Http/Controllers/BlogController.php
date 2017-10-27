@@ -9,10 +9,15 @@ use App\Tag;
 class BlogController extends Controller
 {
 
-	 public function index(){
+     public function indexRight(){
         $blogs = Blog::paginate(5);
         // dd($blogs);
-        return view('test',['blogs'=>$blogs]);
+        return view('blog.BlogSideBarRight',['blogs'=>$blogs]);
+    }
+	 public function indexLeft(){
+        $blogs = Blog::paginate(5);
+        // dd($blogs);
+        return view('blog.BlogSideBarLeft',['blogs'=>$blogs]);
     }
 
      public function detail($id)
