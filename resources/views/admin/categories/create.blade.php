@@ -1,5 +1,8 @@
-@include('layouts.Plane')
-@include('layouts.Dashboard')
+@extends('layouts.Dashboard')
+@section('page_heading')
+<span>Đăng ký thành viên</span>
+@stop
+@section('section')
 <form action="{{route('categories.store')}}" method="POST" role="form" enctype="multipart/form-data">
 		<legend>Thêm mới bài viết</legend>
 		@if (count($errors) > 0)
@@ -13,7 +16,7 @@
 		@endif
 		<div class="form-group">
 			<label for="">name</label>
-			<input type="text" class="form-control" id="title" name="title" placeholder="Title" value="{{old('name')}}">
+			<input type="text" class="form-control" id="name" name="name" placeholder="Name" value="{{old('name')}}">
 		</div>
 		<div class="form-group">
 			<label for="">Description</label>
@@ -22,3 +25,4 @@
 		{{csrf_field()}}	
 		<button type="submit" class="btn btn-primary">Submit</button>
 	</form>
+@stop

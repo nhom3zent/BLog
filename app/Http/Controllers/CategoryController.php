@@ -17,7 +17,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories=Category::paginate(10);
-        return view('categories.index')->withCategories($categories);
+        return view('admin.categories.index')->withCategories($categories);
     }
 
     /**
@@ -27,7 +27,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('categories.create');
+        return view('admin.categories.create');
     }
 
     /**
@@ -52,7 +52,7 @@ class CategoryController extends Controller
     public function show($id)
     {
         $categories = Category::detail($id);
-        return view('categories.show',['categories'=>$categories]);
+        return view('admin.categories.show',['categories'=>$categories]);
     }
 
     /**
@@ -64,7 +64,7 @@ class CategoryController extends Controller
     public function edit($id)
     {   
         $categories=Category::getCategoryById($id);
-        return view('categories.edit',[
+        return view('admin.categories.edit',[
             'categories'  => $categories
             ]);
     }

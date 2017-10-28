@@ -11,7 +11,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ route ('blogs.indexLeft') }}">Blog Nhóm 3</a>
+                <a class="navbar-brand" href="{{ route ('blogs.indexRight') }}">Blog Nhóm 3</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -262,7 +262,7 @@
                             <a href="{{ route('tags.index') }} "><i class="fa fa-edit fa-fw"></i> Tags</a>
                         </li>
                         <li >
-                            <a href="{{ route('users.index') }}"><i class="fa fa-wrench fa-fw"></i>Categoryes</a>
+                            <a href="{{ route('categories.index') }}"><i class="fa fa-wrench fa-fw"></i>Categoryes</a>
                         </li>
                     </ul>
                 </div>

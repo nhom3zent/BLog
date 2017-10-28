@@ -10,13 +10,13 @@ class UserController extends Controller
     public function index(){
     	$users = User::paginate(10);
         // dd($users);
-        return view('admin/Index',['users'=>$users]);
+        return view('admin.user.index',['users'=>$users]);
         
     }
 
     public function show($id){
     	$users = User::show($id);
-    	return view('user/show',['users'=>$users]);
+    	return view('admin.user/show',['users'=>$users]);
     }
     public function destroy($id){
          User::destroy($id);
@@ -24,7 +24,7 @@ class UserController extends Controller
     }
 
     public function create(){
-        return view('user/create');
+        return view('admin.user/create');
     }
 
     public function store(Request $request){
@@ -41,7 +41,7 @@ class UserController extends Controller
     public function edit($id){
         $user = User::all();
         $user = User::getUserById($id);
-        return view('user/edit',[
+        return view('admin.user/edit',[
             'user'  => $user,
             // 'profiles' => $profiles
             ]);

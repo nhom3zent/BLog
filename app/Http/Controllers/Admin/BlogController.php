@@ -14,13 +14,13 @@ class BlogController extends Controller
         $this->middleware('auth');
     }
     public function index(){
-    	$blogs = Blog::paginate(5);
-    	return view('admin.AdminBlog',['blogs' => $blogs]);
+    	$blogs = Blog::orderBy('id','desc')->paginate(5);
+    	return view('admin.blogs.AdminBlog',['blogs' => $blogs]);
     }
     public function show($id){
     	$blog = Blog::find($id);
     	$users = User::get();
-    	return view('admin.ShowBlogAdmin',[
+    	return view('admin.blogs.ShowBlogAdmin',[
     		'blog' => $blog,
     		'users' => $users,
     	]);
@@ -28,7 +28,7 @@ class BlogController extends Controller
     public function create(){
     	$users = User::get();
         $tags = Tag::get();
-    	return view('admin.CreateBlogAdmin',[ 'users' => $users, 'tags' => $tags]);
+    	return view('admin.blogs.CreateBlogAdmin',[ 'users' => $users, 'tags' => $tags]);
     }
     public function store(Request $request){
     	$data = $request->all();
@@ -36,6 +36,8 @@ class BlogController extends Controller
 // dd($blog);
         // dd($blog);
         // dd($data['tag_id']);
+        // dd($data);
+        
         $rules = [
             'title' => 'required',
             'image' => 'required',
@@ -59,6 +61,7 @@ class BlogController extends Controller
             $path = $request->file('image')->store('image');
             $data['image'] = $path;
         };
+        $data['slug'] = str_slug($data['title']);
         
     	$blog = Blog::create($data);        
         if ($blog) {
@@ -70,7 +73,7 @@ class BlogController extends Controller
     public function edit($id){
     	$blog = Blog::find($id);
     	$users = User::get();
-    	return view('admin.UpdateBlogAdmin',['blog' => $blog, 'users' => $users]);
+    	return view('admin.blogs.UpdateBlogAdmin',['blog' => $blog, 'users' => $users]);
     }
     public function update(Request $request, $id){
     	$data = $request->all();
@@ -98,6 +101,7 @@ class BlogController extends Controller
             $path = $request->file('image')->store('image');
             $data['image'] = $path;
         }
+        $data['slug'] = str_slug($data['title']);
     	Blog::find($id)->update($data);
         if (Blog::find($id)->update($data)) {
             $request->session()->flash('message.level1','<script>toastr.success("Sửa thông tin thành công");</script>');

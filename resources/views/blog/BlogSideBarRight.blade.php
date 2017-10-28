@@ -10,10 +10,18 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/slippry.css') }} ">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/fonts.css') }} ">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }} ">
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet"/>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+<link rel ="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+    <!-- Latest compiled and minified CSS & JS -->
+   {{--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <!-- GOOGLE FONTS -->
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Sarina' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Sarina' rel='stylesheet' type='text/css'> --}}
 </head>
 
 <body>
@@ -34,8 +42,11 @@
     ** Header ************************************************************ 
     ****************************************************************** --> 
         
-    <header class="tada-container">
-    
+    {{-- <header class="tada-container">
+    <p style="    position: absolute;
+    right: 100px;
+    top: 59px;
+    font-size: 23px;">fdadf</p> --}}
     
     	<!-- LOGO -->    
     	<div class="logo-container">
@@ -54,46 +65,14 @@
     	<nav class="menu-desktop menu-sticky">
     
             <ul class="tada-menu">
-                     <li><a href="#">HOME <i class="icon-arrow-down8"></i></a>
-                        <ul class="submenu">
-                        	<li><a href="home-1-column.html">Home 1 Column</a></li>
-                            <li><a href="index.html">Home 1 Column + Sidebar</a></li>                            
-                            <li><a href="home-2-columns-with-sidebar.html">Home 2 Columns + Sidebar</a></li>
-                            <li><a href="home-2-columns.html">Home 2 Columns</a></li>
-                            <li><a href="home-3-columns.html">Home 3 Columns</a></li>                                                                      
-                        </ul>
-                    </li>
-                    <li><a href="#">FEATURES <i class="icon-arrow-down8"></i></a>
-                        <ul class="submenu">
-                            <li><a href="page.html">Page</a></li>
-                            <li><a href="page-with-right-sidebar.html">Page + Right Sidebar</a></li>
-                            <li><a href="page-with-left-sidebar.html">Page + Left Sidebar</a></li>                            
-                            <li><a href="post.html">Post Full Width</a></li>
-                            <li><a href="post-with-right-sidebar.html">Post + Right Sidebar</a></li>
-                            <li><a href="post-with-left-sidebar.html">Post + Left Sidebar</a></li>
-                            <li><a href="no-sticky.html">No Sticky Menu</a></li>
-                            <li><a href="no-slider.html">No Slider</a></li> 
-                            <li><a href="#">Submenu <i class="icon-arrow-right8"></i></a>
-                                <ul class="submenu">
-                                    <li><a href="#">Item 1</a></li>
-                                    <li><a href="#">Item 2</a></li>
-                                    <li><a href="#">Item 3</a></li>
-                                    <li><a href="#">Item 4</a></li>
-                                </ul>
-                            </li>                                                                                            
-                        </ul>                
-                    </li>                                     
-                    <li><a href="#">BLOG <i class="icon-arrow-down8"></i></a>
-                        <ul class="submenu">
-                        	<li><a href="blog-1-column.html">Blog 1 Column</a></li>
-                            <li><a href="blog-1-column-with-sidebar.html">Blog + Sidebar</a></li>                            
-                            <li><a href="blog-2-columns-with-sidebar.html">Blog 2 Columns + Sidebar</a></li>
-                            <li><a href="blog-2-columns.html">Blog 2 Columns</a></li>
-                            <li><a href="blog-3-columns.html">Blog 3 Columns</a></li>                                                                      
-                        </ul>                
-                    </li> 
-                    <li><a href="about-us.html" class="active">ABOUT US</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
+                    
+                    <li><a href="#">KINH TẾ</a></li>
+                    <li><a href="#">XÃ HỘI</a></li>                                     
+                    <li><a href="#">THỂ THAO</a></li> 
+                    <li><a href="about-us.html" class="">VĂN HÓA</a></li>
+                    <li><a href="contact.html">NGHỆ THUẬT</a></li>
+                    <li><a href="contact.html">THẾ GIỚI</a></li>
+                    <li><a href="contact.html">LOGIN</a></li>
             </ul>
         
         </nav>
@@ -177,7 +156,7 @@
             <!-- ABOUT ME -->                  
             <div class="widget about-me">
                 <div class="ab-image">
-                    <img src="img/about-me.jpg" alt="about me">
+                    <img src="{{ asset('img/about-me.jpg') }}" alt="about me">
                     <div class="ab-title">About Me</div>
                 </div>
                 <div class="ad-text">
@@ -195,7 +174,7 @@
                 <div class="posts-container">
                 
                     <div class="item">
-                        <img src="img/latest-posts-1.jpg" alt="post 1" class="post-image">
+                        <img src="{{ asset('img/latest-posts-1.jpg') }}" alt="post 1" class="post-image">
                         <div class="info-post">
                             <h5><a href="#">MAECENAS <br> CONSECTETUR</a></h5>
                             <span class="date">07 JUNE 2016</span>  
@@ -204,7 +183,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="img/latest-posts-2.jpg" alt="post 2" class="post-image">
+                        <img src="{{ asset('img/latest-posts-2.jpg') }}" alt="post 2" class="post-image">
                         <div class="info-post">
                             <h5><a href="#">MAURIS SIT AMET</a></h5>
                             <span class="date">06 JUNE 2016</span>                          
@@ -213,7 +192,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="img/latest-posts-3.jpg" alt="post 3" class="post-image">
+                        <img src="{{ asset('img/latest-posts-3.jpg') }}" alt="post 3" class="post-image">
                         <div class="info-post">
                             <h5><a href="#">NAM EGET <br> PULVINAR ANTE</a></h5>
                             <span class="date">05 JUNE 2016</span>                          
@@ -222,7 +201,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="img/latest-posts-4.jpg" alt="post 4" class="post-image">
+                        <img src="{{ asset('img/latest-posts-4.jpg') }}" alt="post 4" class="post-image">
                         <div class="info-post">
                             <h5><a href="#">VIVAMUS ET TURPIS LACINIA</a></h5>
                             <span class="date">04 JUNE 2016</span>                      
@@ -241,7 +220,7 @@
                     Follow Us
                 </h3>
                 <div class="follow-container">
-                    <a href="#"><i class="icon-facebook5"></i></a>
+                    <a href="#"><i class="icon-twitter4"></i></a>
                     <a href="#"><i class="icon-twitter4"></i></a>
                     <a href="#"><i class="icon-google-plus"></i></a>
                     <a href="#"><i class="icon-vimeo4"></i></a>
@@ -277,7 +256,7 @@
             <!-- ADVERTISING -->                              
             <div class="widget advertising">
                 <div class="advertising-container">
-                    <img src="img/350x300.png" alt="banner 350x300">
+                    <img src="{{ asset('img/350x300.png') }}" alt="banner 350x300">
                 </div>
             </div>
 

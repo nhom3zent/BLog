@@ -12,19 +12,16 @@ class BlogController extends Controller
      public function indexRight(){
         $blogs = Blog::paginate(5);
         // dd($blogs);
-        return view('blog.BlogSideBarRight',['blogs'=>$blogs]);
-    }
-	 public function indexLeft(){
-        $blogs = Blog::paginate(5);
-        // dd($blogs);
-        return view('blog.BlogSideBarLeft',['blogs'=>$blogs]);
+        return view('BlogMain',['blogs'=>$blogs]);
     }
 
-     public function detail($id)
+	
+
+     public function detail($slug)
      {
-
-      	$blogs = Blog::detail($id);
-    	return view('detail',['blogs'=>$blogs]);
+      	$blog = Blog::where('slug', '=', $slug)->first();
+        // dd($blog);
+    	return view('DetailBlog',['blog'=>$blog]);
 
     }
      public function destroy($id){
@@ -43,7 +40,6 @@ class BlogController extends Controller
             $path = $request->file('image')->store('image');
             $data['image'] = $path;
         }
-        Blog::store($data);
         return redirect()->route('blogs.index');
     }
 

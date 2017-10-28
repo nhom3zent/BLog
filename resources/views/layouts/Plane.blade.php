@@ -41,7 +41,7 @@
 </head>
 <body>
 	@php
-		session_start();
+		// session_start();
 	@endphp
 	@yield('body')
 	<script src="{{ asset("assets/scripts/frontend.js") }}" type="text/javascript"></script>

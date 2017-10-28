@@ -11,8 +11,8 @@ Route::get('abc', function(){
 
 
 Route::get('blogs','BlogController@indexRight')->name('blogs.indexRight');
-Route::get('blogs','BlogController@indexLeft')->name('blogs.indexLeft');
-Route::get('blogs/{id}','BlogController@detail')->name('blogs.detail');
+// Route::get('blogs','BlogController@indexLeft')->name('blogs.indexLeft');
+Route::get('blogs/{slug}','BlogController@detail')->name('blogs.detail');
 
 
 
@@ -75,6 +75,8 @@ Route::group(['prefix' => 'blog'], function(){
 	Route::delete('/{id}','Admin\BlogController@delete')->name('blog.delete');
 });
 Route::get('xxxs', function(){
+	$a = App\Blog::find(3)->user;
+	dd($a->name);
 	return view('blog.BlogSideBarLeft');
 });
 

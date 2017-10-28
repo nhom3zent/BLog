@@ -47,3 +47,4 @@
 	{{$categories->links()}}
 </html>
 </div>
+@stop
