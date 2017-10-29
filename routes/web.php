@@ -75,9 +75,7 @@ Route::group(['prefix' => 'blog'], function(){
 	Route::delete('/{id}','Admin\BlogController@delete')->name('blog.delete');
 });
 Route::get('xxxs', function(){
-	$a = App\Blog::find(3)->user;
-	dd($a->name);
-	return view('blog.BlogSideBarLeft');
+	return view('demo');
 });
 
 Auth::routes();

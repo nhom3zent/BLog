@@ -45,10 +45,6 @@
 						<a href="{{ route('blog.edit', $blog->id) }}">
 							<button type="button" class="btn btn-default btn-warning">Sửa</button>
 						</a>
-						{{-- <form method="POST" style="display: inline-block;" action="{{ route('blog.delete', $blog->id) }}">
-							{{csrf_field()}}
-							<input type="hidden" name="_method" value="DELETE">
-						</form> --}}
 						<button data-id = "{{ $blog->id }}" type="submit" class="btn btn-default btn-danger" >Xóa</button>
 					</td>
 				</tr>
