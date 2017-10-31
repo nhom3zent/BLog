@@ -1,23 +1,25 @@
 <?php
 
 use App\user;
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
-Route::get('abc', function(){
-	return view('WriteUp');
-});
+
+// Route::get('admin/login','Admin\AuthController@getLogin');
+// Route::post('admin/login','Admin\AuthController@postLogin');
+// Route::get('admin/register','Admin\AuthController@getRegister');
+// Route::post('admin/register','Admin\AuthController@postRegister');
+
+// Route::get('admin/dashboard','AdminController@getIndex');
+// Route::get('admin/logout','AdminController@getLogout');
 
 
 Route::get('blogs','BlogController@indexRight')->name('blogs.indexRight');
-// Route::get('blogs','BlogController@indexLeft')->name('blogs.indexLeft');
+// Route::get('blogs','BlogController@indexLBlogController@indexRighteft')->name('blogs.indexLeft');
 Route::get('blogs/{slug}','BlogController@detail')->name('blogs.detail');
 
 
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('users', 'UserController@index')->name('users.index');
 
@@ -74,9 +76,21 @@ Route::group(['prefix' => 'blog'], function(){
 	Route::put('update/{id}','Admin\BlogController@update')->name('blog.update');
 	Route::delete('/{id}','Admin\BlogController@delete')->name('blog.delete');
 });
-Route::get('xxxs', function(){
-	return view('demo');
-});
 
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('admin.AdminBlog');
+Route::get('/home', 'BlogController@indexRight')->name('admin.AdminBlog');
+
+
+// Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'admin'], function(){
+
+	/* route login admin*/
+	Route::get('/', 'admin\LoginController@getLogin')->name('blogs.indexRight');
+
+	/* route login admin*/
+	Route::post('/','admin\LoginController@postLogin')->name('admin.login');
+
+});
+	Route::get('/logout','admin\LoginController@getLogout')->name('admin.logout');
+
