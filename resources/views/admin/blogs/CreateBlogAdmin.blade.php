@@ -37,10 +37,10 @@
 			<p style="color: blue;">{{ $errors->first('content') }}</p>
 		@endif
 		<div>	
-			<label for="">Tag</label>		
-			<select style="width: 100%;" class="select2" multiple name="tag_id[]">
-				@foreach ($tags as $tag)
-			  		<option value="{{ $tag->id }}">{{ $tag->name }}</option>
+			<label for="">Category</label>		
+			<select style="width: 100%;" class="select2" multiple name="caegoryes_id[]">
+				@foreach ($categoryes as $category)
+			  		<option value="{{ $category->id }}">{{ $category->name }}</option>
 				@endforeach
 		  	</select>		
 		</div>

@@ -6,19 +6,28 @@ use Illuminate\Http\Request;
 use App\Blog;
 use App\User;
 use App\Tag;
+use App\Category;
 class BlogController extends Controller
 {
 
      public function indexRight(){
+        $datas = Category::get();
         $blogs = Blog::paginate(5);
-        // dd($blogs);
-        return view('BlogMain',['blogs'=>$blogs]);
+        return view('BlogMain',['blogs'=>$blogs, 'datas'=> $datas]);
     }
 
-	
+    public function category($category){
+        $datas = Category::get();
+        $id = Category::where('slug', '=', $category)->first()->id;
+        // dd($id);
+        $blogs = Category::orderBy('id','desc')->find($id)->blogs;
+        // dd($blogs);
+        return view('BlogCategory', [ 'blogs' => $blogs, 'datas'=> $datas]);
+    }
 
      public function detail($slug)
      {
+        // dd('a');
       	$blog = Blog::where('slug', '=', $slug)->first();
         // dd($blog);
     	return view('DetailBlog',['blog'=>$blog]);

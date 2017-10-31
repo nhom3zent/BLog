@@ -26,7 +26,8 @@ class HomeController extends Controller
     public function index()
         
     {
-        $blogs = Blog::paginate(10);
-        return view('admin.AdminBlog',['blogs' => $blogs]);
+        // $blogs = Blog::paginate(10);
+        return view('auth.register');
+        // return view('admin.blogs.AdminBlog',['blogs' => $blogs]);
     }
 }

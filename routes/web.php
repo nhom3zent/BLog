@@ -11,8 +11,8 @@ Route::get('abc', function(){
 
 
 Route::get('blogs','BlogController@indexRight')->name('blogs.indexRight');
-// Route::get('blogs','BlogController@indexLeft')->name('blogs.indexLeft');
-Route::get('blogs/{slug}','BlogController@detail')->name('blogs.detail');
+Route::get('blogs/detail/{slug}','BlogController@detail')->name('blogs.detail');
+Route::get('blogs/{category}','BlogController@category')->name('blogs.category');
 
 
 
@@ -75,7 +75,9 @@ Route::group(['prefix' => 'blog'], function(){
 	Route::delete('/{id}','Admin\BlogController@delete')->name('blog.delete');
 });
 Route::get('xxxs', function(){
-	return view('demo');
+	$a = App\Tag::find(6)->kinhtes;
+	dd($a);
+	
 });
 
 Auth::routes();

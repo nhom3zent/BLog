@@ -12,10 +12,9 @@ class Blog extends Model
     protected $fillable =[
    'title' , 'image' , 'description','content','user_id','blog_tag','created_at','updated_at', 'slug'   ];
    
-   public function blog_tag(){
-        return $this->belongsToMany('App\Tag', 'blog_tags', 'blog_id', 'tag_id')->withTimestamps();
+   public function blog_category(){
+        return $this->belongsToMany('App\Category', 'blog_categoryes', 'blog_id', 'categoryes_id')->withTimestamps();
     }
-
     public function user(){
       return $this->belongsTo('App\User');
     }

@@ -15,6 +15,10 @@ class Category extends Model
         'name',
         'description'
     ];
+       public function blogs(){
+        return $this->belongsToMany('App\Blog', 'blog_categoryes', 'categoryes_id', 'blog_id');
+    }
+    
     public static function getall(){
         return DB::table('categoryes')->pagiante(5);
     }

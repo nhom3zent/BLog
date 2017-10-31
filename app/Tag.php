@@ -12,7 +12,9 @@ class Tag extends Model
         'name', 'blog_id'
     ];
 
-      
+    public function blogs(){
+        return $this->belongsToMany('App\Blog', 'blog_tags', 'tag_id', 'blog_id');
+    }
     
     public static function getall(){
         return DB::table('tags')->get();

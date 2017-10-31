@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Blog;
 use App\User;
 use App\Tag;
+use App\Category;
 class BlogController extends Controller
 {
     public function __construct()
@@ -27,8 +28,8 @@ class BlogController extends Controller
     }
     public function create(){
     	$users = User::get();
-        $tags = Tag::get();
-    	return view('admin.blogs.CreateBlogAdmin',[ 'users' => $users, 'tags' => $tags]);
+        $categoryes = Category::get();
+    	return view('admin.blogs.CreateBlogAdmin',[ 'users' => $users, 'categoryes' => $categoryes]);
     }
     public function store(Request $request){
     	$data = $request->all();
@@ -67,7 +68,7 @@ class BlogController extends Controller
         if ($blog) {
             $request->session()->flash('message.level','<script>toastr.success("Thêm mới thành công");</script>');
         }
-        $blog->blog_tag()->attach($data['tag_id']);
+        $blog->blog_category()->attach($data['caegoryes_id']);
     	return redirect()->route('blog.index');
     }
     public function edit($id){

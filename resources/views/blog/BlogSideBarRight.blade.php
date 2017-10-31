@@ -52,7 +52,7 @@
     
     	<!-- LOGO -->    
     	<div class="logo-container">
-        	<a href="index.html"><img src="{{ asset('img/logo.png') }}" alt="logo" ></a>
+        	<a href="{{ route('blogs.indexRight') }}"><img src="{{ asset('img/logo.png') }}" alt="logo" ></a>
             <div class="tada-social">
             	<a href="#"><i class="icon-facebook5"></i></a>
                 <a href="#"><i class="icon-twitter4"></i></a>
@@ -66,12 +66,20 @@
     
             <ul class="tada-menu">
                     
-                    <li><a href="#">KINH TẾ</a></li>
-                    <li><a href="#">XÃ HỘI</a></li>                                     
-                    <li><a href="#">THỂ THAO</a></li> 
-                    <li><a href="about-us.html" class="">VĂN HÓA</a></li>
-                    <li><a href="contact.html">THẾ GIỚI</a></li>
-                    <li><a href="">LOGIN<i class="icon-arrow-down8"></i></a>
+                    <li><a href="{{ route('blogs.category', 'kinh-te') }}">KINH TẾ</a></li>
+
+                    <li><a href="{{ route('blogs.category', 'xa-hoi') }}">XÃ HỘI</a></li>
+
+                    <li><a href="{{ route('blogs.category', 'the-thao') }}">THỂ THAO</a> </li>
+
+                    <li><a href="{{ route('blogs.category', 'van-hoa') }}">VĂN HÓA</a></li>
+
+                    <li><a href="{{ route('blogs.category', 'the-gioi') }}">THẾ GIỚI</a></li>
+
+
+                    <li><a href="{{ route('blogs.indexRight') }}">LOGIN<i class="icon-arrow-down8">@if (Auth::user())
+                                        (<span style=" size: 50% !important;; color: blue;">{{ Auth::user()->name }}</span>)
+                                    @endif</i></a>
                         <ul class="submenu">                            
                             <li><a href="
                                     @if (Auth::user())
@@ -80,7 +88,9 @@
                                         {{ route('login') }}
                                     @endif
 
-                                ">Đăng nhập</a></li>
+                                ">Đăng nhập
+                               
+                            </a></li>
                             <li><a href="{{ route('register') }}">Đăng ký</a></li>
                             <li><a href="home-1-column.html">Thêm bài viết</a></li>
                             <li>
@@ -105,14 +115,18 @@
             <div class="open-menu-responsive">|||</div> 
             <div class="close-menu-responsive">|</div>              
             <div class="menu-responsive">   
-                <ul class="tada-menu">
+                <ul class="tada-menu">                  
                     
-                    <li><a href="#">KINH TẾ</a></li>
-                    <li><a href="#">XÃ HỘI</a></li>                                     
-                    <li><a href="#">THỂ THAO</a></li> 
-                    <li><a href="about-us.html" class="">VĂN HÓA</a></li>
-                    <li><a href="contact.html">NGHỆ THUẬT</a></li>
-                    <li><a href="contact.html">THẾ GIỚI</a></li>
+                    <li><a href="{{ route('blogs.category', 'kinh-te') }}">KINH TẾ</a></li>
+
+                    <li><a href="{{ route('blogs.category', 'xa-hoi') }}">XÃ HỘI</a></li>
+
+                    <li><a href="{{ route('blogs.category', 'the-thao') }}">THỂ THAO</a> </li>
+
+                    <li><a href="{{ route('blogs.category', 'van-hoa') }}">VĂN HÓA</a></li>
+
+                    <li><a href="{{ route('blogs.category', 'the-gioi') }}">THẾ GIỚI</a></li>
+
                     <li><a href="{{ route('login') }}">LOGIN</a>
                          <ul class="submenu">
                             <li><a href="home-1-column.html">Sửa thông tin</a></li>
