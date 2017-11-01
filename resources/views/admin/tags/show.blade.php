@@ -1,7 +1,4 @@
 
-		
-
-
   <b> Name: </b>
   <p>{{$tags->name}}</p>
  <b>Created_at:</b>

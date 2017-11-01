@@ -15,7 +15,6 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    
     public function getLogin() {
     	return view('admin/login');
     }
@@ -41,7 +40,12 @@ class LoginController extends Controller
 
        		if( Auth::attempt(['email' => $email, 'password' =>$password, 'role' => 1]) ) {
     			return redirect()->route('users.index');
-    		} else {
+    		}
+            if( Auth::attempt(['email' => $email, 'password' =>$password, 'role' => 0]) ) {
+                return redirect()->route('blogs.indexRight');
+            }
+
+             else {
     			$errors = new MessageBag(['errorlogin' => 'Email hoặc mật khẩu không đúng']);
     			return redirect()->back()->withInput()->withErrors($errors);
     		}

@@ -36,6 +36,4 @@ class Tag extends Model
      DB::table('tags')->where('id',$id)->delete();
         return true;
    }
-
-  
 }

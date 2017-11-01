@@ -28,10 +28,6 @@ class TagsController extends Controller
     public function store(Request $request){
 
         $data= $request->all();
-        // if ($request->hasFile('image')) {
-        //     $path = $request->file('image')->store('image');
-        //     $data['image'] = $path;
-        // }
         Tag::store($data);
         return redirect()->route('tags.index');
     }

@@ -19,6 +19,7 @@ Route::get('blogs/{slug}','BlogController@detail')->name('blogs.detail');
 
 
 
+
 // Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('users', 'UserController@index')->name('users.index');

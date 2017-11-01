@@ -1,0 +1,13 @@
+#showtag li{
+list-style: none;
+ float: left; 
+ padding: 5px 10px;
+ background-color: #9c8156;
+ border: 1px solid white;
+ border-radius: 10px;
+ margin:2px;
+ color: white;
+}
+#showtag li:hover{
+	background-color: #6d593d;
+}

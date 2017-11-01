@@ -15,15 +15,19 @@ class BlogController extends Controller
         return view('BlogMain',['blogs'=>$blogs]);
     }
 
-	
-
      public function detail($slug)
      {
+
+        $tags = Tag::all();
       	$blog = Blog::where('slug', '=', $slug)->first();
-        // dd($blog);
-    	return view('DetailBlog',['blog'=>$blog]);
+        
+    	return view('DetailBlog',
+            ['blog'=>$blog,
+            'tags'=>$tags]
+            );
 
     }
+
      public function destroy($id){
          Blog::destroy($id);
         return redirect()->back();
