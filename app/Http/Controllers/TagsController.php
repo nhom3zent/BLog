@@ -18,7 +18,10 @@ class TagsController extends Controller
     }
     public function destroy($id){
          Tag::destroy($id);
-        return redirect()->back();
+       return response()->json([
+            'error' => false,
+            'message' => 'Xóa thành công',
+        ]);
     }
 
     public function create(){
@@ -28,27 +31,55 @@ class TagsController extends Controller
     public function store(Request $request){
 
         $data= $request->all();
-        Tag::store($data);
+
+        $rules = [
+            'name' => 'required:max:100',
+            'blog_id' => 'required',
+        ];
+         $messages = [
+            'name.required' => 'Không được bỏ trống!',
+            'blog_id.required' => 'Không được bỏ trống!',
+        ];
+         $validator = \Validator::make($request->all(), $rules, $messages);
+        if ($validator->fails()) {
+            return redirect()->back()
+                            ->withErrors($validator->errors())
+                            ->withInput();
+        }
+        $tag = Tag::create($data);        
+        if ($tag) {
+            $request->session()->flash('message.level','<script>toastr.success("Thêm mới thành công");</script>');
+        }
+        
+        // Tag::store($data);
         return redirect()->route('tags.index');
     }
+        
+  
 
     public function edit($id){
-        $tag = Tag::all();
-        $tag = Tag::getTagsById($id);
+        $tag = Tag::find($id);
         return view('admin.tags/edit',[
             'tag'  => $tag,
-            // 'profiles' => $profiles
             ]);
     }
 
-    public function update(Request $request,$id){
+    public function update(Request $request, $id){
         $data = $request->all();
-        unset($data['_token']);
-        unset($data['method']);
-        $update = Tag::UpDateTagsById($id,$data);
+         $rules = [
+            'name' => 'required',
+            'blog_id' => 'required',
+        ];
+         $messages = [
+            'name.required' => 'Không được bỏ trống',
+            'blog_id.required' => 'Không được bỏ trống',
+        ];
+        
+        Tag::find($id)->update($data);
+        if (Tag::find($id)->update($data)) {
+            $request->session()->flash('message.level1','<script>toastr.success("Sửa thông tin thành công");</script>');
+        }
+
         return redirect()->route('tags.index');
-        // return redirect()->back();
-
-    }
-
+}
 }

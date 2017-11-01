@@ -6,14 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 class CategoryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function __contruct(){
-        $this->middleware('auth');
-    }
+
     public function index()
     {
         $categories=Category::paginate(10);
@@ -39,7 +32,25 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $data= $request->all();
-        Category::create($data);
+        $rules = [
+            'name' => 'required:max:100',
+            'description' => 'required',
+        ];
+         $messages = [
+            'name.required' => 'Không được bỏ trống!',
+            'description.required' => 'Không được bỏ trống!',
+        ];
+         $validator = \Validator::make($request->all(), $rules, $messages);
+        if ($validator->fails()) {
+            return redirect()->back()
+                            ->withErrors($validator->errors())
+                            ->withInput();
+        }
+        $categories = Category::create($data);        
+        if ($categories) {
+            $request->session()->flash('message.level','<script>toastr.success("Thêm mới thành công");</script>');
+        }
+        Category::store($data);
         return redirect()->route('categories.index');
     }
 
@@ -93,6 +104,9 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         Category::destroy($id);
-        return redirect()->back();
+       return response()->json([
+            'error' => false,
+            'message' => 'Xóa thành công',
+        ]);
     }
 }
