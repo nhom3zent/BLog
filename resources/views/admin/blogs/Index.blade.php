@@ -3,13 +3,18 @@
 <span>Danh sách người dùng</span>
 @stop
 @section('section')
+<script type="text/javascript">
+    $(document).ready(function() {
+    $('#example').DataTable();
+} );
+</script>
 <div>
 	<h3>Danh Sách Người Dùng</h3>
 
 
 	<a href=""><button type="button" class="btn btn-default btn-info" >Thêm Mới</button></a>
 
-	<table class="table table-hover">
+	<table class="table table-hover" id="example">
 
 		<thead>
 			<tr>
@@ -43,7 +48,7 @@
 			@endforeach @endif
 		</tbody>
 	</table>
-			{{ $users->links() }}
+			{{-- {{ $users->links() }} --}}
 </body>
 </html>
 </div>

@@ -11,9 +11,9 @@
 	@if (session()->has('message.level1'))
 		    {!! session('message.level1') !!}
 	@endif
-	<a href="{{ route('blog.create') }}"><button type="button" class="btn btn-default btn-info" >Add</button></a>
+	<a href="{{ route('blog.create') }}"><button type="button" class="btn btn-default btn-info" >Add</button></a><br>
 	
-	<table class="table table-hover">
+	<table class="table table-hover"  >
 
 		<thead>
 			<tr>

@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Blog;
+
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-
     /**
      * Create a new controller instance.
      *
@@ -14,7 +13,6 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-       
         $this->middleware('auth');
     }
 
@@ -24,7 +22,6 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-        
     {
         // $blogs = Blog::paginate(10);
         return view('auth.register');

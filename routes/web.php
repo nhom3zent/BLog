@@ -1,13 +1,15 @@
 <?php
 
 use App\user;
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
-Route::get('abc', function(){
-	return view('WriteUp');
-});
+
+// Route::get('admin/login','Admin\AuthController@getLogin');
+// Route::post('admin/login','Admin\AuthController@postLogin');
+// Route::get('admin/register','Admin\AuthController@getRegister');
+// Route::post('admin/register','Admin\AuthController@postRegister');
+
+// Route::get('admin/dashboard','AdminController@getIndex');
+// Route::get('admin/logout','AdminController@getLogout');
 
 
 Route::get('blogs','BlogController@indexRight')->name('blogs.indexRight');
@@ -17,7 +19,7 @@ Route::get('blogs/{category}','BlogController@category')->name('blogs.category')
 
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/register', 'HomeController@index')->name('register');
 
 Route::get('users', 'UserController@index')->name('users.index');
 
@@ -81,4 +83,19 @@ Route::get('xxxs', function(){
 });
 
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('admin.AdminBlog');
+Route::get('/home', 'BlogController@indexRight')->name('admin.AdminBlog');
+
+
+// Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'admin'], function(){
+
+	/* route login admin*/
+	Route::get('/', 'admin\LoginController@getLogin')->name('blogs.indexRight');
+
+	/* route login admin*/
+	Route::post('/','admin\LoginController@postLogin')->name('admin.login');
+
+});
+	Route::get('/logout','admin\LoginController@getLogout')->name('admin.logout');
+

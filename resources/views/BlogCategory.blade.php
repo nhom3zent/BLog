@@ -18,10 +18,10 @@
             	<div class="post-by">Post By <a href="#">AD-Theme</a></div>
                 <div class="extra-info">
                 	
-            		<a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            		<a href=""><i class="icon-facebook5" aria-hidden="true"></i></a>
             		<a href=""><i class="icon-twitter4"></i></a>
             		<a href=""><i class="icon-google-plus"></i></a>
-                    <span class="comments">25 <i class="fa fa-comment-o"></i></span>
+                    <span class="comments">25 <i class="icon-bubble2"></i></span>
                 </div>
                 <div class="clearfix"></div>
             </div>
