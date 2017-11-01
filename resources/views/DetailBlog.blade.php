@@ -4,9 +4,7 @@
 	<article style="color: black;">
     	<div class="post-image">
         	<img src="{!! asset($blog->image) !!}" alt="post image 1"> 
-        </div>
-        <div class="category">
-        	<a href="#">IMG</a>
+            <div class="category"><a href="#">IMG</a></div>
         </div>
         <div class="post-text">
         	<span class="date" style="text-align: center;">{!! $blog->created_at !!}</span>
@@ -21,6 +19,8 @@
         	<div class="text" style="color: black;">
         		<p>{!! $blog->content !!}</p>
             </div>
+
+            
         </div>
         <div class="social-post">
             <a href="#"><i class="icon-facebook5"></i></a>

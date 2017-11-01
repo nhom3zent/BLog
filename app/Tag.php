@@ -22,14 +22,14 @@ class Tag extends Model
    }
 
     public static function getTagsById($id){
-    return DB::table('tags')->where('id',$id)->first();
+    return Tag::find($id);
  }
      public static function store($data){
-      Tags::create($data);
+       $tag = Tag::create($data);
       return true;
    }
    public static function UpDateTagsById($id,$data){
-      return Tags::find($id)->update($data);
+      return Tag::find($id)->update($data);
    }
 
    public static function destroy($id){

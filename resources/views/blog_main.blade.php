@@ -1,6 +1,6 @@
 @extends('blog.BlogSideBarRight')
 
-@section('ContentLeft') 
+@section('Content_Left') 
 
 	@foreach ($blogs as $blog)
 		<article style="color: black;">
