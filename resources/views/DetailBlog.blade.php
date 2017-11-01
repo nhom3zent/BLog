@@ -31,8 +31,8 @@
         </div>
         
     	<p>
-	        <div class="fb-comments" data-href="http://blog.dev/blogs/{{$blog->slug}}" data-colorscheme="light" 
-	         data-numposts="5" data-width="500"></div>
+	        <div class="fb-comments" {{-- data-href="http://blog.dev/blogs/{{$blog->slug}}" --}} data-colorscheme="light" 
+	         data-numposts="5" data-width="500" data-href="{{ route('blogs.detail',['slug'=>$blog->slug]) }}"></div>
 	        <div id="fb-root"></div>
 	      	<script>(function(d, s, id) {
 	      	  var js, fjs = d.getElementsByTagName(s)[0];
