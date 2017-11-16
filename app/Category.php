@@ -26,7 +26,7 @@ class Category extends Model
    		return Category::find($id);
 	}
 	public static function store($data){
-      Category::create($data);
+      $categories = Category::create($data);
       return true;
    }
    public static function detail($id){

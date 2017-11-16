@@ -1,6 +1,10 @@
+
 @extends('blog.BlogSideBarRight')
 
 @section('ContentLeft') 
+    
+
+
 
 	@foreach ($blogs as $blog)
 		<article style="color: black;">
@@ -33,5 +37,11 @@
         <a href="#" class="next">Next Posts <i class="icon-arrow-right8"></i></a>
         <div class="clearfix"></div>
     </div> --}}
+	{{-- {{ $blogs->links() }} --}}
+        	<div class="navigation">
+                <a href="#" class="prev"><i class="icon-arrow-left8"></i> Previous Posts</a>
+                <a href="#" class="next">Next Posts <i class="icon-arrow-right8"></i></a>
+                <div class="clearfix"></div>
+            </div>
 
 @stop

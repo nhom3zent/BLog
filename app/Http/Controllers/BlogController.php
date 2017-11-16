@@ -27,12 +27,17 @@ class BlogController extends Controller
 
      public function detail($slug)
      {
-        // dd('a');
+
+        $tags = Tag::all();
       	$blog = Blog::where('slug', '=', $slug)->first();
-        // dd($blog);
-    	return view('DetailBlog',['blog'=>$blog]);
+        
+    	return view('DetailBlog',
+            ['blog'=>$blog,
+            'tags'=>$tags]
+            );
 
     }
+
      public function destroy($id){
          Blog::destroy($id);
         return redirect()->back();

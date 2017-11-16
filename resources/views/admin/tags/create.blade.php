@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+@extends('layouts.Dashboard')
+@section('section')
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 	<div class="container">
 		
 		<h1>Them moi</h1>
@@ -14,13 +12,17 @@
 			<label for="">Name</label>
 			<input type="text" name="name" id="name" class="form-control">
 		</div>
-
-		<div class="form-group">
+		@if ($errors->has('name'))
+			<p style="color: red;">{{ $errors->first('name') }}</p>
+		@endif
+		{{-- <div class="form-group">
 			
 			<label for="">Blog_id</label>
 			<input type="text" name="blog_id" id="blog_id" class="form-control">
-		</div>
-
+		</div> --}}
+		{{-- @if ($errors->has('blog_id'))
+			<p style="color: red;">{{ $errors->first('blog_id') }}</p>
+		@endif --}}
 		<div class="form-group">
 			
 			<label for="">Created_at</label>
@@ -38,5 +40,4 @@
 		</form>
 		
 	</div>
-</body>
-</html>
+@stop

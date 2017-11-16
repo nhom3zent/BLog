@@ -2,21 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Tada & Blog - About US</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="shortcut icon" type="image/png" href="{{ asset('img/favicon.png') }} "/>
-    <!-- STYLES -->
+
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }} ">
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }} ">
+
     <link rel="stylesheet" type="text/css" href="{{ asset('css/slippry.css') }} ">
+
     <link rel="stylesheet" type="text/css" href="{{ asset('css/fonts.css') }} ">
+
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }} ">
+
     <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}">
-        <link href="css/font-awesome.min.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/cssTag.css') }}">
+
+    <title>Tada & Blog - About US</title>
+
+    
+        <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet"/>
 
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-<link rel ="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+<link rel ="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery.js"></script>

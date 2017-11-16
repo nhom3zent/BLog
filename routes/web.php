@@ -18,8 +18,9 @@ Route::get('blogs/{category}','BlogController@category')->name('blogs.category')
 
 
 
-
 Route::get('/register', 'HomeController@index')->name('register');
+
+// Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('users', 'UserController@index')->name('users.index');
 

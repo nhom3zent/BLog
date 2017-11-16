@@ -38,16 +38,6 @@
 		    }
 		});
 	</script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script type="text/javascript">
-	    $(document).ready(function() {
-	    $('#example').DataTable();
-	} );
-	</script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-<script src="//cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
-<script src="//cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js"></script>
 </head>
 <body>
 	@php
